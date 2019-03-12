@@ -1,0 +1,902 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0061)http://www.manshijian.com/articles/article_detail/203296.html -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link type="text/css" rel="stylesheet" href="/static/css/base.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/login.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/green.css">
+    <script charset="utf-8" src="/static/js/s.js"></script>
+    <script type="text/javascript" src="/static/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/common.js"></script>
+    <script type="text/javascript" src="/static/js/artDialog.js"></script>
+    <script type="text/javascript" src="/static/js/login.js"></script>
+    <script type="text/javascript" src="/static/js/index.js"></script>
+    <script type="text/javascript" src="/static/js/reply.js"></script>
+    <script src="/static/js/language1.js"></script>
+<title>温言</title>
+<meta name="keywords" content="">
+</head>
+
+<body>
+    <div class="" style="display: none; position: absolute;">
+        <div class="aui_outer">
+            <table class="aui_border">
+                <tbody>
+                    <tr>
+                        <td class="aui_nw"></td>
+                        <td class="aui_n"></td>
+                        <td class="aui_ne"></td>
+                    </tr>
+                    <tr>
+                        <td class="aui_w"></td>
+                        <td class="aui_c">
+                            <div class="aui_inner">
+                                <table class="aui_dialog">
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2" class="aui_header">
+                                                <div class="aui_titleBar">
+                                                    <div class="aui_title" style="cursor: move; display: block;"></div>
+                                                    <a class="aui_close" href="javascript:/*artDialog*/;" style="display: block;">×</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="aui_icon" style="display: none;">
+                                                <div class="aui_iconBg" style="background: none;"></div>
+                                            </td>
+                                            <td class="aui_main" style="width: auto; height: auto;">
+                                                <div class="aui_content" style="padding: 20px 25px;"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="aui_footer">
+                                                <div class="aui_buttons" style="display: none;"></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="aui_e"></td>
+                    </tr>
+                    <tr>
+                        <td class="aui_sw"></td>
+                        <td class="aui_s"></td>
+                        <td class="aui_se" style="cursor: se-resize;"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+<a name="gotop"></a>
+<div class="menu_bg1" id="ajax_menu">
+    <div id="menu" style="position:relative; z-index:99999;">
+        <div class="login">
+            <ul>
+                <ul>
+                    <li class="login_id" style="display: none">0</li>
+                    <li class="mysharli2" >
+                        <a href="/register">注册</a>
+                    </li>
+                    <li class="other">
+                        <a href="/login" class="hide" id="hide_login">登录</a>
+                    </li>
+                    <li class="other1">
+                        <a href=""  title="" rel="sidebar" class="favorit">加入收藏</a>
+                    </li>
+                    <li class="mysharli">
+                        <a href="" id="change">简繁体切换</a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+</div>
+    <script>
+function login(uid){
+    art.dialog({
+        title: '基本信息',
+        fixed: true,
+        background: '#333333',
+        opacity: 0.5,
+        content: '<div class="register_pop">' +
+            '<div class="form">' +
+            '<form action="/information/" method="post" enctype="multipart/form-data">' +
+            '<ul>' +
+            '<li>' +
+            '<input type="hidden" name="userid" value="'+ uid +'">'+
+            '</li>'+
+            '<li>' +
+            '<label>姓名</label>' +
+            '<span><input name="uname" id="login_email" type="text" class="input_text"/></span></li>' +
+            '<li><label>年龄</label><span><input name="uage" id="age" type="text" class="input_text"/></span><em class="login_password_errorInfo" id="login_errorInfo"></em></li>' +
+            '<li><label>性别</label><span><input type="radio" name="gender" value="male" checked="checked">男' +
+            '&nbsp;&nbsp;<input type="radio" name="gender" value="female">女</span><em class="login_password_errorInfo" id="login_errorInfo"></em></li>' +
+            '<li><label>城市</label><span><input name="city" id="city" type="text" class="input_text"/></span><em class="login_password_errorInfo" id="login_errorInfo"></em></li>' +
+            '<li><label>上传头像</label><span><input name="uimg" id="picture" type="file" ></span><em class="login_password_errorInfo" id="login_errorInfo"></em></li>' +
+            '<li>' +
+            '<input id="ajaxlogin" name="ajaxlogin" type="submit" value="保存" class="btn-reg">' +
+            '</li>' +
+            '</ul>' +
+            '</form><div class="other-list"></div>' +
+            '</div>' +
+            '</div>'
+    });
+}
+
+</script>
+
+
+<div class="search">
+    <div class="logo">
+        <a href="#">温言</a>
+    </div>
+    <form action="" method="post" accept-charset="utf-8" id="article_search" class="sns-form" enctype="multipart/form-data">
+        <div class="searcher">
+            <ul>
+                <li>
+                    <div class="text">
+                        <input name="articles_keyword" type="text" maxlength="30" style="width:220px; height:30px; line-height:30px; float:left; background:none; border:none; color:#666;">
+                    </div>
+                </li>
+                <li><input name="articles_search_button" type="submit" class="botton" value=""></li>
+            </ul>
+        </div>
+    </form></div>
+<div class="menu_bg">
+    <div id="menu">
+        <div class="menu">
+            <ul>
+                <li class="find">
+                    <a href="/">首页</a>
+                </li>
+                <li>
+                    <a rel="nofollow" class="hide" href="/showclass">失恋33天</a>
+                </li>
+                <li>
+                <a class="hide" href="#">一别两宽</a>
+                </li>
+                <li>
+                    <a class="hide" href="#">各生欢喜</a>
+                </li>
+                <li>
+                    <a class="hide" href="3">再逢亦友</a>
+                </li>
+                <li>
+                    <a class="hide" href="#">交谈甚欢</a>
+                </li>
+                <li>
+                    <a href="#" style="width:95px;">发现美好</a>
+                </li>
+                <li>
+                    <a class="hide" href="#">心里咨询</a>
+                    <ul>
+                        <li><a href="">治愈音乐</a></li>
+                        <li><a href="">治愈书籍</a></li>
+                        <li><a href="">治愈电影</a></li>
+                        <li><a href="">线上咨询</a></li>
+                        <li><a href="">到店咨询</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<div class="breadcrumb">
+    <a href="/">首页</a>&gt;<a href="/page/">个人主页</a>&gt;<a href="http://www.manshijian.com/articles/category/yuedu.html">阅读</a>&gt;<font>{{ text.title }}</font>
+</div>
+<div class="body_main nobackground">
+	<div class="left_in detailed">
+		<div class="new_content"> 
+			<h1>
+                {{ text.title }}
+            </h1>
+            <input type="hidden" id="hidden_title" value="{{ text.title }}">
+            <input type="hidden" id="hidden_member" value="{{ text.id }}">
+            {{ text.content }}
+
+            <div class="clear"></div>
+            <div class="botton">
+                <ul>
+                    <li class="click_zan"><a href="javascript:void(0);" id="article_detail_like_203296">3</a></li>
+                    <li class="click_loves"><a href="javascript:void(0);" id="favourite_detail_203296">已收藏</a></li>
+                    <li class="shars">
+                        <div class="botton_ly">
+                    </li>
+
+                    <li class="return">
+                        <a href="{% url "modify_text" text.id %}">编辑文章</a>
+                     </li>
+                    <li class="return"><a href="javascript:history.go(-1)">返回</a></li>
+                </ul>
+            </div>
+            <!-- JiaThis Button BEGIN -->
+			<div class="jiathis_style"><span class="jiathis_txt">分享链接：</span>
+			<a class="jiathis_button_qzone"></a>
+			<a class="jiathis_button_weixin"></a>
+			<a class="jiathis_button_tsina"></a>
+			</div>
+			<script type="text/javascript">
+			var jiathis_config={
+				summary:'宴桃园豪杰三结义  斩黄巾英雄首立功 - 第一回·宴桃园豪杰三结义 斩黄巾英雄首立功滚滚长江东逝水，浪花淘尽英雄。是非成败转头空。青山依旧在，...',
+				pic:'',
+				shortUrl:false,
+				hideMore:false
+			}
+			</script>
+			<script type="text/javascript" src="/static/js/jia.js" charset="utf-8"></script>
+			<!-- JiaThis Button END -->
+            <div class="clear"></div>
+        
+            
+            <!--我的观点-->
+            <div class="gd-bg">
+            	<div class="gd-navbg">我的观点...</div>
+                <div class="clear"></div>
+                 <ul class="gd-nr">
+                    <li>
+                        <div class="wz">
+                            <span style="cursor:pointer;" id="default_standpoint_count_92" title="书很好">书很好                                                (<span id="default_click_count_92">0</span>)
+                        </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wz">
+                            <span style="cursor:pointer;" id="default_standpoint_count_93" title="很有没有好好看一本书了">很有没有好好看一本书了                                               
+                            (<span id="default_click_count_93">0</span>)
+                        </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wz">
+                            <span style="cursor:pointer;" id="default_standpoint_count_94" title="文字使人安静">文字使人安静                                               
+                                (<span id="default_click_count_94">0</span>)
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wz">
+                            <span style="cursor:pointer;" id="default_standpoint_count_95" title="读完会有幸福感">读完会有幸福感                                                
+                                (<span id="default_click_count_95">0</span>)
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wz">
+                            <span style="cursor:pointer;" id="default_standpoint_count_96" title="喜欢这种风格">喜欢这种风格                                                
+                                (<span id="default_click_count_96">0</span>)
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wz">
+                            <span style="cursor:pointer;" id="default_standpoint_count_97" title="有收获 喜欢这本书的作者">有收获 喜欢这本书的作者                                                
+                                (<span id="default_click_count_97">0</span>)
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wz">
+                            <span style="cursor:pointer;" id="default_standpoint_count_98" title="收藏这本书">收藏这本书                                                
+                                (<span id="default_click_count_98">0</span>)
+                            </span>
+                        </div>
+                    </li>
+                                                            
+                    <input type="hidden" id="member_standpoint_hidden" value="{{ text.id }}">
+                    <li style="border:none; background:none; float:left;">
+                    	<input name="standpoint" id="standpoint" type="text" maxlength="30" class="srk">
+                        <input id="standpoint_btn" type="button" class="gdbtn" value="提交">
+                    </li>
+                 </ul>
+            </div>
+            <div class="clear"></div>
+
+            
+                        <!--问答-->
+            <div class="wd-all">
+            	<div class="wd-nav">我想知道...</div>
+                <div class="clear"></div>
+                <ul class="wd-nrbod">
+                </ul>
+                
+                <div class="clear"></div>
+                <div class="wd-wytwbtn">
+                    <a href="javascript:void(0);" id="my_ask">我要提问</a>
+                </div>
+                <div id="my_ask_content" style="display:none;">
+                    <textarea name="content" id="content" class="wd-wytwtext"></textarea>
+                    <div class="clear"></div>
+                    <input type="button" class="wdtjbtn" id="member_question" value="提交">
+                                        
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!--问答结束-->
+            		</div>
+        
+		<!--回复-->
+        <form action="" method="post" accept-charset="utf-8" id="article_comment_add_form">
+            <div id="comment_container" class="comment" style="display:block;">
+        	<div class="wd-nav">我要回复...</div>
+            <div class="clear"></div>
+            <div id="container" class="review_ico1">
+            	<div style=" float:left; line-height:24px; color:#999;">我想说两句：</div>
+                <textarea name="article_comment" id="article_comment" class="comment-txt"></textarea>
+                <div class="ico">
+                    <a href="javascript:void(0);" id="message_face">
+                        <img src="/static/img/1.gif" alt="表情">
+                    </a>
+                </div>
+                <div style="float: left;margin:5px 0 0 10px;"><a href="javascript:;" id="upload_image_btn" onclick="upload_image_btn()"><img src="/static/img/picture.png"></a>
+                </div>
+                <div class="submit cls">
+                    <a id="article_comment_btn" class="comment-btn">
+                        回复
+                    </a>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div id="uploadify_hidden_">
+                <input type="hidden" id="hidden_img_" iidd_="0" name="hidden_img_" value="">
+                <input type="hidden" id="simgname_" name="simgname_" value=""></div>
+        </div>
+        
+        <input type="hidden" name="article_id" id="article_id" value="">
+        </form>
+        <div id="normal">
+        <input type="hidden" id="hidden_code" value="1">
+<div class="subTitle">所有回复<span>(0)</span></div>
+<div id="n_content">
+</div>
+
+{# <script type="">#}
+{#     $(function () {#}
+{#         $("#article_comment_btn").click(function () {#}
+{#             var textid = $("#member_standpoint_hidden").val();#}
+{#             var userid = $(".login_id").text();#}
+{#             var content = $("#article_comment").val();#}
+{#             var html = "";#}
+{#             $.post('/reply/',{"textid":textid,"userid":userid,"content":content},function (data) {#}
+{##}
+{#             },"json")#}
+{#         })#}
+{#     })#}
+{# </script>#}
+<!--新的回复-->
+<script type="text/javascript">
+//回复资讯回复（详细页）
+$("a[id^='article_comment_reply_link_']").click(function(){
+    var id = $(this).attr('id');
+    id = id.substring(27,id.length);
+    $('#reply_comment_'+id).show();
+    $("#re_message_"+id).jqfaceedit({txtAreaObj:$("#reply_comment_content_"+id),containerObj:$('#reply_face_'+id),textareaid: 'reply_comment_content_'+id,top:25,left:-27});
+}); 
+function point_message()
+{
+    var point = 2;
+    art.dialog({
+        title: '',
+        time:3,
+        content: '<table><tr height="40"><td width="90"><embed src="/images/slow_down/swf/hourglass.swf" type="application/x-shockwave-flash" width="75" height="75" wmode="transparent"></embed></td><td width="110">恭喜您获得'+point+'沙粒</td></tr></table>'
+    });
+}
+//盖楼回复
+$("a[id^='article_comment_reply_btn_']").click(function(){
+    var id = $(this).attr('id');
+    id = id.substring(26,id.length);
+    var comment_id = $('#comment_id_'+id).val();
+    var reply_comment_content = $('#reply_comment_content_'+id).val();
+    var article_id = $('#article_id').val();
+    var article_simgname = $('#simgname_'+id).val();
+    var code_count = $("#hidden_code").val();
+    var captch = $("#captch_val_"+id).val();
+    $('#reply_comment_content_'+id).val('');
+    $("#captch_val_"+id).val('');
+    $("#captch_change_"+id).html('点击获取验证码');
+    if(reply_comment_content != ''){
+        if(code_count < 3){
+            $.post('',{'article_id':article_id,'comment_id':comment_id,'reply_comment_content':reply_comment_content,'article_simgname':article_simgname},function(msg){
+                $('simgname_'+id).val('');
+                if(msg.flag == 'guest'){
+                    //alert(msg.info);
+                    //window.location.href='/members/login/article_' + article_id;
+                }else{
+                    if(msg.number == 'yes'){
+                        point_message();
+                        $('div#normal').load('/articles/article_reply/' + article_id + '.html');
+                        $.ajaxSetup({ cache: false /*关闭AJAX相应的缓存*/});
+                        //setTimeout( function () {
+                        // 
+                        //}, 2000)
+                    }else if(msg.str == 'no'){
+                        alert('您的评论存在非法关键字，请重新编辑！');
+    			        $.ajaxSetup({ cache: false /*关闭AJAX相应的缓存*/});
+                    }else{
+                        $('div#normal').load('/articles/article_reply/' + article_id + '.html');
+                        $.ajaxSetup({ cache: false /*关闭AJAX相应的缓存*/});
+                    }
+                }
+            },"json");
+        }else{
+            if(captch == ''){
+				alert("请输入验证码");
+			}else{
+                $.post('',{'article_id':article_id,'comment_id':comment_id,'reply_comment_content':reply_comment_content,'article_simgname':article_simgname,'captch':captch},function(msg){
+                    $('simgname_'+id).val('');
+                    if(msg.flag == 'guest'){
+                        //alert(msg.info);
+                        //window.location.href='/members/login/article_' + article_id;
+                    }else{
+                        if(msg.number == 'yes'){
+                            point_message();
+                            $('div#normal').load('/articles/article_reply/' + article_id + '.html');
+                            $.ajaxSetup({ cache: false /*关闭AJAX相应的缓存*/});
+                            //setTimeout( function () {
+                            // 
+                            //}, 2000)
+                        }else if(msg.str == 'no'){
+                            alert('您的评论存在非法关键字，请重新编辑！');
+        			        $.ajaxSetup({ cache: false /*关闭AJAX相应的缓存*/});
+                        }else if(msg.str == 'captch_no'){
+							alert('验证码错误');
+							$.ajaxSetup({cache: false /*关闭AJAX相应的缓存*/});
+						}else{
+                            $('div#normal').load('/articles/article_reply/' + article_id + '.html');
+                            $.ajaxSetup({ cache: false /*关闭AJAX相应的缓存*/});
+                        }
+                    }
+                },"json");
+			}
+        }
+    }else{
+        $('#reply_comment_content_'+id).focus();
+        alert('请您输入回复内容');
+    }
+}); 
+
+//删除
+function article_comment_delete(id){
+    if(confirm('确认要删除吗？')){
+        if(id){
+            $.post('',{'id':id},function(msg){
+                if(msg.succ == 1){
+                //$('div#normal').load('/articles/article_reply/' + article_id + '.html');
+                $("div#box_contant_"+id).remove();
+                } else { 
+                 alert('删除失败,系统繁忙');
+                }
+            },"json");
+        }else{
+            alert('删除失败,系统繁忙');
+        }
+    }else{
+        return false;
+    }
+}
+
+</script>
+        </div>
+        <div class="clear"></div>
+
+
+
+        <!-- 无觅插件 -->
+	</div>
+
+    <div class="right">
+        <div class="body_righ_serven">
+    <div class="share-user">
+        <dl class="share-avatar cls">
+                        <dt>
+                <a target="_blank" title="" class="common-card" href="/homepage">
+                                        <img src="{{ icon }}" width="80" height="80">
+                                    </a>
+            </dt>
+            <dd>
+                <a target="_blank" title="" class="green common-card" href="/homepage">{{ name }}</a>
+            </dd>
+            <dd>
+               <!--                 <p class="desc">&nbsp;</p>
+                -->
+                                <div class="lz">来自：{{ city }}</div>
+                				<ul class="gz">
+                	<li>
+                    	<div class="sz">53</div>
+                        <div class="wz"><a href="http://www.manshijian.com/members/member_fans_detail/68193.html">粉丝</a></div>
+                    </li>
+                    <li>
+                    	<div class="sz">0</div>
+                        <div class="wz"><a href="http://www.manshijian.com/members/member_follow_detail/68193.html">关注</a></div>
+                    </li>
+                    <li>
+                    	<div class="sz">1970</div>
+                        <div class="wz"><a href="http://www.manshijian.com/members/member_detail_article/68193.html">分享</a></div>
+                    </li>
+                </ul>
+            </dd>
+            <div class="clear"></div>
+                                            <div class="addshare"><a href="javascript:void(0);" id="follow_no_login" onclick="login()">我要关注</a></div>
+
+                        <div class="addshare" style="float:left; margin-left:5px;"><a href="javascript:void(0);" id="sendMessage_no_login" onclick="login()">发送私信</a></div>
+                                </dl>
+        <div class="clear"></div>
+        <div style=" float:left; margin-top:5px; margin-left:5px; width:220px;"><em>{{ time }}</em></div>
+   	    <div class="clear"></div>
+    </div>
+    <input type="hidden" id="hidden_member" value="68193">
+    </div>
+<div class="clear"></div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#follow").live('click',function(){
+            var member_follow_id = $("#hidden_member").val();
+            $.post('',{'member_follow_id':member_follow_id},function(msg){
+                if(msg.flag == 'guest'){
+                    alert(msg.info);
+                    window.location.href='/members/login/member_detail_' + member_follow_id;
+                } else {
+                    $('#follow').html(msg.info);
+                }
+            },"json");
+        })
+
+        $("#sendMessage").live('click',function(){
+            var member_id = $("#hidden_member").val();
+            window.location.href='/members/member_message/' + member_id;
+        })
+    });
+</script>
+<div class="body_right_one">
+    <h1>热门标签 　　　　
+        <b><a href="http://www.manshijian.com/articles/tags/all.html">[所有热门标签]</a></b>
+    </h1>
+        <ul>
+        <span>慢生活</span>
+                <li><a href="http://www.manshijian.com/articles/tag/MmtzYUJJUWxSTnF5RWpQL2xmZDFDRTlZQXYvNXIzRU5aTGlyRE1CUXlxVT0=.html">慢生活</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/K2ZEcmZPdlV0b1J3WVdFUmJBSHloeWNwVFRVcUxtL21KelZGSlZSY1prbz0=.html">美食</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/RHdadGtRT2N4UGNRbFFFSjlPVlVFbnhJYmF5dllLaWNWUGpIMjNiVjllMD0=.html">创意</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/T1FDaEpMdHhjVzh3eVFXQ1dJamMrUHY0a3VpYmhOSGZMRzRCMjZWMGFtWT0=.html">食谱</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/Y1VRVU5sT1NjOEVGbVpGaE5GZkJvV29FQmVBWGRseWlrcU5DaU8rNU9Tdz0=.html">家居</a></li>
+                <li><a href="http://www.manshijian.com/articles/tags/1.html">更多...</a></li>
+    </ul>
+        <ul>
+        <span>慢风景</span>
+                <li><a href="http://www.manshijian.com/articles/tag/MVlsYmYxUmh1VHJIQnNnOCt0SnRrUHBieHZsYlJKMEJIOHdzcStSMU1zQT0=.html">摄影</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/MmtzYUJJUWxSTnF5RWpQL2xmZDFDRTlZQXYvNXIzRU5aTGlyRE1CUXlxVT0=.html">慢生活</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/TGdyT2hmSEdEZ0NVTDU1WnpwSFcybFh6V3RFVDB1a2FxMGlpMHZMbS9yUT0=.html">旅行</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/YXV5ZUZHbDh4NzlTN0VsV1ppT1JVUVZrd2R4cUdDSWVaZGY4YWpacldiND0=.html">风景</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/ak1hLzZGblJLcTlYRlR0UEYrWVVlaVVNVit5VStIMDN4QmRYaDZaVG4xQT0=.html">人文</a></li>
+                <li><a href="http://www.manshijian.com/articles/tags/2.html">更多...</a></li>
+    </ul>
+        <ul>
+        <span>慢文艺</span>
+                <li><a href="http://www.manshijian.com/articles/tag/YndNSjZZMEJ4RnBMSHhNT2FsMFhBZTMwejFJS1cvWWUzN0RxUFNxWHRwZz0=.html">随笔</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/QVpwWE5FWUp4QW5BRTVIUzVNMmpnZlM3M243WU9OYXJlZjZ0TmN2aFVvRT0=.html">心情</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/aDBlUUZQVnI1a3lVclZCVm5QdVAwZjVBcWRtSEVubmxSQkRUM3c0UTVHWT0=.html">美文</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/Ryt1blNrQWVpNkdQWEhBdmtEd0xKQXo5eE9tSzFNT1RMU09vMkRNTkZWND0=.html">小文艺</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/MFBvUFBXR3dtYVhsSmQrMXFUZjRPdytlUHRpL2kvSGFEOFN4Tk1pTmxVaz0=.html">插画</a></li>
+                <li><a href="http://www.manshijian.com/articles/tags/3.html">更多...</a></li>
+    </ul>
+        <ul>
+        <span>慢一族</span>
+                <li><a href="http://www.manshijian.com/articles/tag/MmtzYUJJUWxSTnF5RWpQL2xmZDFDRTlZQXYvNXIzRU5aTGlyRE1CUXlxVT0=.html">慢生活</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/WHZtcy84OUhodERrRnI5NTlRazlqdVZ3eGpSVmE5dmlqV3o0U1ZvR1M5WT0=.html">梦想</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/YVhXMGd3RGtNUDl2RUlMODhPRkV5QU4xdEljWXBuUEtrYWhPMnJpSnRPTT0=.html">文艺</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/aXoyVkRJMXJXY2dRU0czYzlsUWpLWWtUelJCUGdEVm85ZHBPWk4yQ1Q1Zz0=.html">明星</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/V2lVbWpXVkFicDRsZVQ3QmNwMWdReUpnR2hPblFYRjJURUlnZ2QySHMrVT0=.html">手工客</a></li>
+                <li><a href="http://www.manshijian.com/articles/tags/4.html">更多...</a></li>
+    </ul>
+        <ul>
+        <span>慢公益</span>
+                <li><a href="http://www.manshijian.com/articles/tag/cmd2TnRqa3dYNm4xSUp6Z2VkbVhoOHFoNTdsMTBveDI4NnB3dGVXU3cyND0=.html">公益</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/VlNPMk9LbVY0dE8reDJ0Ym1tRElvRWttQVVkeXl2YjBvcFJJQ3BOcTljQT0=.html">深圳</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/TForODdqbnNGbzU1SkdqeFN1SVVlajFTZENwMG9wUFNsSC9LdkFFOFpQND0=.html">谢谢</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/bCtocGdycFZBcjVKV21tVzQ1WWkrTndSSVIxbVNvYmlxVDZROXNCb3d4TT0=.html">爱</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/K1NpTi9DWHVvYkw1NlkwMktUSkFlYWtGTjNRbHNBOFJmaXVkbmlyM2VUST0=.html">语言</a></li>
+                <li><a href="http://www.manshijian.com/articles/tags/40.html">更多...</a></li>
+    </ul>
+    </div><div class="body_right_three">
+    <h1>精选文章</h1>
+    <ul>
+                <li>
+            <a href="http://www.manshijian.com/articles/article_detail/203255.html">
+                最适合一个人漫游的9个旅...            </a>
+            <span>10月22日</span>
+        </li>
+                <li>
+            <a href="http://www.manshijian.com/articles/article_detail/202643.html">
+                杭椒牛柳            </a>
+            <span>10月22日</span>
+        </li>
+                <li>
+            <a href="http://www.manshijian.com/articles/article_detail/202644.html">
+                酸奶松饼            </a>
+            <span>10月23日</span>
+        </li>
+                <li>
+            <a href="http://www.manshijian.com/articles/article_detail/203156.html">
+                Maria Svarbova泳池系列摄...            </a>
+            <span>10月23日</span>
+        </li>
+                <li>
+            <a href="http://www.manshijian.com/articles/article_detail/202679.html">
+                在美味的食物里，你的一举...            </a>
+            <span>10月24日</span>
+        </li>
+                <li>
+            <a href="http://www.manshijian.com/articles/article_detail/203152.html">
+                Joachim Munter动物肖像摄...            </a>
+            <span>10月24日</span>
+        </li>
+                <li>
+            <a href="http://www.manshijian.com/articles/article_detail/203065.html">
+                更了解这颗蓝色星球，九本...            </a>
+            <span>10月22日</span>
+        </li>
+                <li>
+            <a href="http://www.manshijian.com/articles/article_detail/202624.html">
+                学会这些，再也不用担心花...            </a>
+            <span>10月22日</span>
+        </li>
+            </ul>
+</div>
+<div class="clear"></div><div class="body_right_three">
+    <h1>最新文章</h1>
+    <ul>
+                <li>
+            <a href="http://www.manshijian.com/articles/article_detail/203093.html">
+                上帝视角 | Tobias Hägg ...            </a>
+            <span>10月25日</span>
+        </li>
+                <li>
+            <a href="http://www.manshijian.com/articles/article_detail/203254.html">
+                暑期快结束了，全国247个5...            </a>
+            <span>10月25日</span>
+        </li>
+                <li>
+            <a href="http://www.manshijian.com/articles/article_detail/203063.html">
+                这些书给你打开一扇看到这...            </a>
+            <span>10月25日</span>
+        </li>
+                <li>
+            <a href="http://www.manshijian.com/articles/article_detail/202627.html">
+                这东西一毛钱不值，夏天铺...            </a>
+            <span>10月25日</span>
+        </li>
+                <li>
+            <a href="http://www.manshijian.com/articles/article_detail/203211.html">
+                鸟人刺绣，来自艺术家chee...            </a>
+            <span>10月24日</span>
+        </li>
+                <li>
+            <a href="http://www.manshijian.com/articles/article_detail/202679.html">
+                在美味的食物里，你的一举...            </a>
+            <span>10月24日</span>
+        </li>
+                <li>
+            <a href="http://www.manshijian.com/articles/article_detail/202626.html">
+                长相奇葩但耐看的5种植物...            </a>
+            <span>10月24日</span>
+        </li>
+                <li>
+            <a href="http://www.manshijian.com/articles/article_detail/203152.html">
+                Joachim Munter动物肖像摄...            </a>
+            <span>10月24日</span>
+        </li>
+            </ul>
+</div>
+<div class="clear"></div>
+<div class="body_right_two">
+
+
+<div class="clear"></div>
+</div>
+    <input type="hidden" name="code_key" id="code_key" value="N1k1akFOVnBYLzVYWHU1MlpaWFdKZzVITGFVMmppNHRMcGJBTlRsakp1VnNTZWowM09MTGRGczNOZkx0YU1PVVJvMnhPK2loMVp0SEdiV3hmeHo3dWc9PQ==">
+</div>
+<script type="text/javascript">
+{#$(document).ready(function(){#}
+{#    //放新浪微博表情#}
+{#    $("#message_face").jqfaceedit({txtAreaObj:$("#article_comment"),containerObj:$('#container'),textareaid: 'article_comment',top:25,left:-27});#}
+{#    //显示表情#}
+{#    $('.re_detail').html();#}
+{#    $('.re_detail').emotionsToHtml();#}
+{#});#}
+
+function upload_image_btn(){
+    var token = $("#code_key").val();
+    art.dialog({
+        title: '图片上传',
+        width: '700px',
+        height: '300px',
+        fixed: true,
+        opacity: 0.5,
+        content: '<div class="image_panel"><iframe width="640" height="230" src="/scripts/uploadify_v32/articles_frame.php?num=&textname=article_comment&access_token='+token+'" frameborder="0" scrolling="no" id="frmContent"></iframe></div>'
+    });
+}
+
+//回复评论
+function hf_upload_image_btn_(obj){
+    var token = $("#code_key").val();
+    var id = obj.attr('id');
+    id = id.substring(20,id.length);
+    art.dialog({
+        title: '图片上传',
+        width: '700px',
+        height: '300px',
+        fixed: true,
+        opacity: 0.5,
+        content: '<div class="image_panel"><iframe width="640" height="230" src="/scripts/uploadify_v32/articles_frame.php?num='+id+'&textname=reply_comment_content_&access_token='+token+'" frameborder="0" scrolling="no" id="frmContenthf"></iframe></div>'
+    });
+}
+
+function login(){
+    art.dialog({
+        title: '用户登录',
+        fixed: true,
+        background: '#333333',
+        opacity: 0.5,
+        content: '<div class="register_pop">' +
+            '<h1>欢迎登录<span class="green_title">慢时间</span></h1><div class="form"><form><ul><li><label>用户名</label><span><input name="login_email" id="login_email" type="text" class="input_text"/></span></li><li><label>密码</label><span><input name="password" id="password" type="password" class="input_text"/></span><em class="login_password_errorInfo" id="login_errorInfo"></em></li><li><span style="padding-left:110px;"><a href="/forget">忘记密码？</a></span></li><li><input id="ajaxlogin" name="ajaxlogin" type="button" value="登录" class="btn-reg" /></li></ul></form><div class="other-list"></div></div></div>'
+    });
+}
+
+$('#member_question').live('click',function(){
+    var content = $("#content").val();
+    var article_id = $("#article_id").val();
+    var question_type = 'question';
+    var title = $("#hidden_title").val();
+    var hidden_member = $("#hidden_member").val();
+    if(content.length >0){
+        $.post('',{'content':content,'article_id':article_id,'question_type':question_type,'title':title,'hidden_member':hidden_member},function(msg){
+            if(msg == 1){
+                location.href="/articles/article_detail/"+article_id+".html";
+            }else if(msg == 2){
+                alert('您的提问存在非法关键字，请重新提问');
+            }
+        });
+    }else{
+        $("#content").focus();
+        alert('请填写你的问题');
+        return false;
+    }
+
+});
+
+$("#my_ask").click(function(){
+    $("#my_ask_content").css('display','block');
+})
+
+$("#change").live('click',function(){
+	$.post('',{},function(msg){
+		$("#change").html(msg);
+	});
+})
+
+$("span[id^='captch_change_']").live('click',function(){
+    var id = $(this).attr('id');
+    id = id.substring(14,id.length);
+	$.post('',{},function(msg){
+		$("#captch_change_"+id).html(msg);
+	});
+})
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#standpoint").val('请输入你的观点');
+        $("#standpoint").focusin(function(){
+            $("#standpoint").val('');
+        });
+
+        $("#standpoint").focusout(function(){
+            if($("#standpoint").val() == ''){
+                $("#standpoint").val('请输入你的观点');
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+    document.body.oncopy = function () {
+        setTimeout( function () { var text = clipboardData.getData("text");
+            if (text) {
+                text = text + "\r\n本篇文章来源于慢时间(www.manshijian.com) 原文链接："+location.href;
+                clipboardData.setData("text", text);
+            }
+        }, 100 )
+    }
+</script>
+<div class="footer">
+    <div class="foot">
+        <div class="understand">
+            <ul>
+                <li><b><a name="manshijian">了解慢时间</a></b></li>
+                <li><a href="http://www.manshijian.com/aboutus.html">关于我们</a></li>
+                <li><a href="http://www.manshijian.com/agreement.html">使用协议</a></li>
+                <li><a href="http://www.manshijian.com/cooperation.html">商务合作</a></li>
+            </ul>
+        </div>
+
+        <div class="user">
+            <ul>
+                <li><b>用户中心</b></li>
+                <li><a href="http://www.manshijian.com/feedback.html">意见反馈</a></li>
+                <li><a href="http://www.manshijian.com/faq.html">常见问题</a></li>
+                <li><a href="http://www.manshijian.com/guide.html">新手上路</a></li>
+            </ul>
+        </div>
+        <div class="weixin">
+            <ul>
+                <li><b>微信二维码</b></li>
+                <li><a href="http://www.manshijian.com/images/weixin.jpg" target="_blank">
+                    <img src="/static/img/weixin.png"></a></li>
+            </ul>
+        </div>
+        <div class="service">
+            <ul>
+                <li><b>关注我们</b></li>
+                <li><i></i><a target="_blank" href="http://weibo.com/manshijian">新浪微博</a></li>
+                <li class="qq"><i></i><a target="_blank" href="http://t.qq.com/manshijianwang">腾讯微博</a></li>
+                <li class="douban"><i></i><a target="_blank" href="http://site.douban.com/184399/">豆瓣小站</a></li>
+            </ul>
+        </div>
+        <div class="slowtime">
+        <h1>慢时间</h1>
+          <ul>
+            <li><a href="javascript:void(0);" title="慢生活" rel="nofollow" id="my_phone_footer">手机版</a></li>
+            <li><a href="javascript:void(0);" title="慢文艺" rel="nofollow" id="client_ios">iPhone客户端</a></li>
+            <li><a href="javascript:void(0);" title="慢风景" rel="nofollow" id="client_android">安卓客户端</a></li>
+          </ul>
+        </div>
+        <div class="bottom">Copyright © 2011-2018 慢时间 | <a href="http://www.manshijian.com/" target="_blank">慢生活</a>社区，小清新网站 </div>
+    </div>
+        <div class="go">
+    	<a title="返回顶部" class="top" href="#gotop"></a>
+    	<a title="如果您有意见，请反馈给我们！" class="feedback" href="" target="_blank"></a>
+    	<a title="返回底部" class="bottom" href="#gobottom"></a>
+    </div>
+        <a name="gobottom">&nbsp;</a>
+</div>
+
+<script type="text/javascript">
+var flag = "c6d4d16be943985aaa28c92783cd3620";
+var url = document.referrer;
+var current_url = window.location.href;
+var rand = 'xZzjsbgM1OyYY6X4uK98YspHkISNQyUNHEpssZihP6g=';
+var member_id = '';
+var point_url = "";
+$(document).ready(function(){
+    $.post('',{'flag':flag,'url':url,'current_url':current_url},function(msg){
+
+    },"json");
+
+
+    $("input[name='articles_keyword']").val('搜索您感兴趣的慢生活资讯和活动');
+    $("input[name='articles_keyword']").focusin(function(){
+        $("input[name='articles_keyword']").val('');
+    });
+    $("input[name='articles_keyword']").focusout(function(){
+        if($("input[name='articles_keyword']").val() == ''){
+            $("input[name='articles_keyword']").val('搜索您感兴趣的慢生活资讯和活动');
+        }
+    });
+});
+</script>
+
+<div id="hm_t_7997" class="hm-t-container">
+    <div class="hm-t-main" style="width:322px;height:322px;display:none">
+        <img src="/static/img/bigweixin.jpg" width="320" height="320" alt="官方微信" title="官方微信">
+    </div>
+    <div class="hm-t-side-arrow" style="display: none;"></div>
+<div title="官方微信" class="hm-t-unfold-button hm-t-unfold-button-txt" style="cursor: default; font-size: 14px; line-height: 17px; padding-top: 3px; height: 37px;">官方微信</div>
+</div>
+<script type="text/javascript">
+        $("#change").click(function(){
+            translate();
+        })
+</script>
+</body>
+</html>

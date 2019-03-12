@@ -1,0 +1,980 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0063)http://www.manshijian.com/members/member_fans_detail/68193.html -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link type="text/css" rel="stylesheet" href="/static/css/base.css">
+<link type="text/css" rel="stylesheet" href="/static/css/home.css">
+<link type="text/css" rel="stylesheet" href="/static/css/green.css">
+<script charset="utf-8" src="/static/js/s.js"></script>
+<script src="/static/js/language1.js"></script>
+<script type="text/javascript" src="/static/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/static/js/common.js"></script>
+<script src="/static/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="/static/js/artDialog.js"></script>
+    <script src="/static/js/index.js"></script>
+<title>温言</title>
+<meta name="keywords" content="温言">
+<style>
+     .menu_bg .menu ul li {
+         padding: 0 10px; }
+ </style>
+</head>
+
+<body>
+    <div class="" style="display: none; position: absolute;">
+        <div class="aui_outer">
+            <table class="aui_border">
+                <tbody>
+                    <tr>
+                        <td class="aui_nw"></td>
+                        <td class="aui_n"></td>
+                        <td class="aui_ne"></td>
+                    </tr>
+                    <tr>
+                        <td class="aui_w"></td>
+                        <td class="aui_c">
+                            <div class="aui_inner">
+                                <table class="aui_dialog">
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2" class="aui_header">
+                                                <div class="aui_titleBar">
+                                                    <div class="aui_title" style="cursor: move; display: block;"></div>
+                                                    <a class="aui_close" href="javascript:/*artDialog*/;" style="display: block;">×</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="aui_icon" style="display: none;">
+                                                <div class="aui_iconBg" style="background: none;"></div>
+                                            </td>
+                                            <td class="aui_main" style="width: auto; height: auto;">
+                                                <div class="aui_content" style="padding: 20px 25px;"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="aui_footer">
+                                                <div class="aui_buttons" style="display: none;"></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="aui_e"></td>
+                    </tr>
+                    <tr>
+                        <td class="aui_sw"></td>
+                        <td class="aui_s"></td>
+                        <td class="aui_se" style="cursor: se-resize;"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+<a name="gotop"></a>
+<div class="menu_bg1" id="ajax_menu">
+    <div id="menu" style="position:relative; z-index:99999;">
+        <div class="login">
+            <ul>
+                <ul>
+                    <li class="login_id" style="display: none">0</li>
+                    <li class="mysharli2" >
+                        <a href="/register">注册</a>
+                    </li>
+                    <li class="other">
+                        <a href="/login" class="hide" id="hide_login">登录</a>
+                    </li>
+                    <li class="other1">
+                        <a href=""  title="" rel="sidebar" class="favorit">加入收藏</a>
+                    </li>
+                    <li class="mysharli">
+                        <a href="" id="change">简繁体切换</a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+</div>
+    <script>
+function login(){
+    art.dialog({
+        title: '基本信息',
+        fixed: true,
+        background: '#333333',
+        opacity: 0.5,
+        content: '<div class="register_pop">' +
+            '<div class="form">' +
+            '<form>' +
+            '<ul>' +
+            '<li>' +
+            '<label>姓名</label>' +
+            '<span><input name="login_email" id="login_email" type="text" class="input_text"/></span></li>' +
+            '<li><label>年龄</label><span><input name="password" id="age" type="password" class="input_text"/></span><em class="login_password_errorInfo" id="login_errorInfo"></em></li>' +
+            '<li><label>性别</label><span><input type="radio" name="gender" value="male" checked="checked">男' +
+            '&nbsp;&nbsp;<input type="radio" name="gender" value="female">女</span><em class="login_password_errorInfo" id="login_errorInfo"></em></li>' +
+            '<li><label>城市</label><span><input name="city" id="city" type="password" class="input_text"/></span><em class="login_password_errorInfo" id="login_errorInfo"></em></li>' +
+            '<li><label>上传头像</label><span><input name="picture" id="picture" type="file" ></span><em class="login_password_errorInfo" id="login_errorInfo"></em></li>' +
+            '<li>' +
+            '<input id="ajaxlogin" name="ajaxlogin" type="button" value="保存" class="btn-reg">' +
+            '<a href="/forget"><input id="modify" name="modify" type="button" value="修改密码" class="btn-reg"></a>' +
+            '</li>' +
+            '</ul>' +
+            '</form><div class="other-list"></div>' +
+            '</div>' +
+            '</div>'
+    });
+}
+</script>
+<div class="search">
+    <div class="logo">
+        <a href="/">慢生活</a></div>
+    <form action="" method="post" accept-charset="utf-8" id="article_search" class="sns-form" enctype="multipart/form-data">    
+        <div class="searcher">
+        <ul>
+            <li>
+                <div class="text">
+                    <input name="articles_keyword" type="text" maxlength="30" style="width:220px; height:30px; line-height:30px; float:left; background:none; border:none; color:#666;">
+                </div>
+            </li>
+            <li><input name="articles_search_button" type="submit" class="botton" value=""></li>
+        </ul>
+    </div>
+    </form></div>
+<div class="menu_bg">
+    <div id="menu">
+        <div class="menu">
+            <ul>
+                <li class="find">
+                    <a href="/">首页</a>
+                </li>
+                <li>
+                    <a rel="nofollow" class="hide" href="#">失恋33天</a>
+                    <ul>
+                    </ul>
+                </li>
+                <li>
+                <a class="hide" href="#">一别两宽</a>
+                </li>
+                <li>
+                    <a class="hide" href="#">各生欢喜</a>
+                    <ul>
+                    </ul>
+                </li>
+                <li>
+                    <a class="hide" href="3">再逢亦友</a>
+                    <ul>
+                    </ul>
+                </li>
+                <li>
+                    <a class="hide" href="#">交谈甚欢</a>
+                    <ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" style="width:95px;">发现美好</a>
+                </li>
+                <li>
+                    <a class="hide" href="#">心里咨询</a>
+                    <ul>
+                        <li><a href="">治愈音乐</a></li>
+                        <li><a href="">治愈书籍</a></li>
+                        <li><a href="">治愈电影</a></li>
+                        <li><a href="">线上咨询</a></li>
+                        <li><a href="">到店咨询</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div><div class="user_home">
+    <div class="left_user">
+        <div class="pic">
+                                    <p><img src="/static/img/thumb_1716B7AD8E0141856CAA671EE2BACE6B.jpg"></p>
+                                    
+<input type="hidden" name="member_follow_id" value="68193">
+        </div>
+        <div class="left_user_2">
+            <h1><a href="/homepage" id="titlename">叶知秋</a>&nbsp;&nbsp;<span></span></h1>
+                        <div class="fans">
+                <ul>
+                    <li>53</li>
+                    <li><a href="">粉丝</a></li>
+                </ul>
+            </div>
+            <div class="fans">
+                <ul>
+                    <li>0</li>
+                    <li><a href="http://www.manshijian.com/members/member_follow_detail/68193.html">关注</a></li>
+                </ul>
+            </div>
+            <div class="fans">
+                <ul>
+                    <li>1674</li>
+                    <li><a href="http://www.manshijian.com/members/member_detail_article/68193.html">分享</a></li>
+                </ul>
+            </div>
+            
+        </div>
+           
+        <div class="clear"></div>
+    </div>
+    <div class="right_user">
+        <div class="text">
+		        <div class="text"></div>
+            <div style="float:left; margin-top:5px;">
+         	<p class="addshare"><a href="">发送私信</a>&nbsp;</p>
+                                    <p class="addshare" id="member_follow"><a href="javascript:void(0);">我要关注</a></p>
+                                    </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div><div class="body_main nobackground">
+    <div class="left_body_news">
+        <div class="user-fans">
+             <h1>全部粉丝(53个)</h1>
+                                       <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/67254.html">
+                         <img src="/static/img/girl.jpg" width="50" height="50">
+                                                                        </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/67254.html">zym</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_67254"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/71011.html">
+                         <img src="/static/img/girl.jpg" width="50" height="50"></a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/71011.html">Even</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                        <span id="member_track_other_71011"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/70995.html">
+                        <img src="/static/img/boy.jpg" width="50" height="50">
+                            </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/70995.html">时间上的小蝌蚪</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                        <span id="member_track_other_70995"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/70933.html">
+                        <img src="/static/img/boy.jpg" width="50" height="50"></a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/70933.html">下雨太阳不会被淋湿</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_70933"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/70926.html">
+                                                                                <img src="/static/img/boy.jpg" width="50" height="50">
+                                                                        </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/70926.html">❤Steadfast.J</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_70926"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/70816.html">
+                                                                                <img src="/static/img/girl.jpg" width="50" height="50">
+                                                                        </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/70816.html">小红帽</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_70816"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/70785.html">
+                                                                                <img src="/static/img/girl.jpg" width="50" height="50">
+                                                                        </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/70785.html">2018年要变美变瘦变更好的淼淼</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_70785"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/70669.html">
+                                                                                <img src="/static/img/boy.jpg" width="50" height="50">
+                                                                        </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/70669.html">月夜_Tsukiyo</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_70669"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/70668.html">
+                                                                                <img src="/static/img/girl.jpg" width="50" height="50">
+                                                                        </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/70668.html">一哥</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_70668"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/49419.html">
+                                                                                <img src="/static/img/girl.jpg" width="50" height="50">
+                                                                        </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/49419.html">╭❀飘 </a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_49419"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/70557.html">
+                                                                                <img src="/static/img/girl.jpg" width="50" height="50">
+                                                                        </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/70557.html">IDAC彦翔设计（小林）</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_70557"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/70554.html">
+                                                                                <img src="/static/img/girl.jpg" width="50" height="50">
+                                                                        </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/70554.html">天蓝色的彼岸</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_70554"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/70550.html">
+                                                                                <img src="/static/img/girl.jpg" width="50" height="50">
+                                                                        </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/70550.html">晋美</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_70550"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/70463.html">
+                                                                                <img src="/static/img/girl.jpg" width="50" height="50">
+                                                                        </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/70463.html">我就这样偷偷的</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_70463"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/70455.html">
+                                                                                <img src="/static/img/boy.jpg" width="50" height="50">
+                                                                        </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/70455.html">何(hers)</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_70455"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/70442.html">
+                                                                                <img src="/static/img/girl.jpg" width="50" height="50">
+                                                                        </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/70442.html">沐兮❀</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_70442"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/70432.html">
+                                                                                <img src="/static/img/girl.jpg" width="50" height="50">
+                                                                        </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/70432.html">jessie┥锦瑟┡</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_70432"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/70418.html">
+                                                                                <img src="/static/img/girl.jpg" width="50" height="50">
+                                                                        </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/70418.html">木槿</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_70418"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/70391.html">
+                                                                                <img src="/static/img/girl.jpg" width="50" height="50">
+                                                                        </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/70391.html">KUKU侯丹妮</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_70391"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/70380.html">
+                                                                                <img src="/static/img/boy.jpg" width="50" height="50">
+                                                                        </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/70380.html">leon</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_70380"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/70352.html">
+                                                <img src="/static/img/boy.jpg" width="50" height="50">
+                                            </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/70352.html">阿成</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_70352"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/70342.html">
+                                                                                <img src="/static/img/boy.jpg" width="50" height="50">
+                                                                        </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/70342.html">鲸落</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_70342"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/69658.html">
+                                                                                <img src="/static/img/girl.jpg" width="50" height="50">
+                                                                        </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/69658.html">爱若琴弦</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_69658"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/70257.html">
+                                                                                <img src="/static/img/boy.jpg" width="50" height="50">
+                                                                        </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/70257.html">易天老虎</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_70257"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/70242.html">
+                                                <img src="/static/img/boy.jpg" width="50" height="50">
+                                            </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/70242.html">阿分</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_70242"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/70201.html">
+                                                                                <img src="/static/img/girl.jpg" width="50" height="50">
+                                                                        </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/70201.html">初夏</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_70201"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/70152.html">
+                                                                                <img src="/static/img/girl.jpg" width="50" height="50">
+                                                                        </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/70152.html">bjdiy</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_70152"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/70084.html">
+                                                                                <img src="/static/img/girl.jpg" width="50" height="50">
+                                                                        </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/70084.html">现在不想爱</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_70084"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/33502.html">
+                                                                                <img src="/static/img/girl.jpg" width="50" height="50">
+                                                                        </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/33502.html">如月</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_33502"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                          <div class="box-box">
+                <div class="img">
+                    <a href="http://www.manshijian.com/members/member_detail/49616.html">
+                                                                                <img src="/static/img/boy.jpg" width="50" height="50">
+                                                                        </a>
+                </div>
+                <div class="text">
+                     <ul>
+                       <input type="hidden" name="member_id" id="member_id" value="68193">
+                       <li class="name"><a href="http://www.manshijian.com/members/member_detail/49616.html">Kevin_小川</a></li>
+                       <li><a href="http://www.manshijian.com/members/member_fans_detail/68193.html#">&nbsp;</a></li>
+                       <li>
+                                                          <span id="member_track_other_49616"><a href="javascript:void(0);">我要关注</a></span>
+                                                  </li>
+                     </ul>
+                  </div>
+             </div>
+                                   </div>
+        <div class="list_p4">
+			<div class="pages">
+				<ul>
+					<li><span class="current">1</span></li><li><a href="http://www.manshijian.com/members/member_fans_detail/68193/2">2</a></li><li><a href="http://www.manshijian.com/members/member_fans_detail/68193/2">&gt;</a></li>				</ul>
+			</div>
+        </div>
+    </div>
+    <div class="right user_menu">
+        <div class="left1">
+                        <div class="navbg">
+                <span>她的粉丝</span>
+                <a href="http://www.manshijian.com/members/member_fans_detail/68193.html">(全部)</a>
+            </div>
+            <ul class="tx">
+                                <li>
+                    <div class="tximg">
+                        <a href="http://www.manshijian.com/members/member_detail/67254.html">
+                                                <img width="50" height="50" class="atUser" src="/static/img/girl.jpg">
+                                                </a>
+                    </div>
+                    <div class="txwz"><a href="http://www.manshijian.com/members/member_detail/67254.html" title="zym">zym</a></div>
+                </li>
+                                <li>
+                    <div class="tximg">
+                        <a href="http://www.manshijian.com/members/member_detail/71011.html">
+                                                <img width="50" height="50" class="atUser" src="/static/img/girl.jpg">
+                                                </a>
+                    </div>
+                    <div class="txwz"><a href="http://www.manshijian.com/members/member_detail/71011.html" title="Even">Even</a></div>
+                </li>
+                                <li>
+                    <div class="tximg">
+                        <a href="http://www.manshijian.com/members/member_detail/70995.html">
+                                                <img width="50" height="50" class="atUser" src="/static/img/boy.jpg">
+                                                </a>
+                    </div>
+                    <div class="txwz"><a href="http://www.manshijian.com/members/member_detail/70995.html" title="时间上的小蝌蚪">时间...</a></div>
+                </li>
+                                <li>
+                    <div class="tximg">
+                        <a href="http://www.manshijian.com/members/member_detail/70933.html">
+                                                <img width="50" height="50" class="atUser" src="/static/img/boy.jpg">
+                                                </a>
+                    </div>
+                    <div class="txwz"><a href="http://www.manshijian.com/members/member_detail/70933.html" title="下雨太阳不会被淋湿">下雨...</a></div>
+                </li>
+                                <li>
+                    <div class="tximg">
+                        <a href="http://www.manshijian.com/members/member_detail/70926.html">
+                                                <img width="50" height="50" class="atUser" src="/static/img/boy.jpg">
+                                                </a>
+                    </div>
+                    <div class="txwz"><a href="http://www.manshijian.com/members/member_detail/70926.html" title="❤Steadfast.J">❤S...</a></div>
+                </li>
+                                <li>
+                    <div class="tximg">
+                        <a href="http://www.manshijian.com/members/member_detail/70816.html">
+                                                <img width="50" height="50" class="atUser" src="/static/img/girl.jpg">
+                                                </a>
+                    </div>
+                    <div class="txwz"><a href="http://www.manshijian.com/members/member_detail/70816.html" title="小红帽">小红帽</a></div>
+                </li>
+                                <li>
+                    <div class="tximg">
+                        <a href="http://www.manshijian.com/members/member_detail/70785.html">
+                                                <img width="50" height="50" class="atUser" src="/static/img/girl.jpg">
+                                                </a>
+                    </div>
+                    <div class="txwz"><a href="http://www.manshijian.com/members/member_detail/70785.html" title="2018年要变美变瘦变更好的淼淼">20...</a></div>
+                </li>
+                                <li>
+                    <div class="tximg">
+                        <a href="http://www.manshijian.com/members/member_detail/70669.html">
+                                                <img width="50" height="50" class="atUser" src="/static/img/boy.jpg">
+                                                </a>
+                    </div>
+                    <div class="txwz"><a href="http://www.manshijian.com/members/member_detail/70669.html" title="月夜_Tsukiyo">月夜...</a></div>
+                </li>
+                                <li>
+                    <div class="tximg">
+                        <a href="http://www.manshijian.com/members/member_detail/70668.html">
+                                                <img width="50" height="50" class="atUser" src="/static/img/girl.jpg">
+                                                </a>
+                    </div>
+                    <div class="txwz"><a href="http://www.manshijian.com/members/member_detail/70668.html" title="一哥">一哥</a></div>
+                </li>
+                            </ul>
+            <div class="clear"></div>
+                        
+                        
+                        <div class="navbg">
+                <span>她的文章</span>
+                <a href="http://www.manshijian.com/members/member_detail/68193.html">(全部)</a>
+            </div>
+            <ul class="xshd">
+                   
+                <li style="padding-left:10px;">
+                    <div class="xshdtopwz">
+                        <a href="http://www.manshijian.com/articles/article_detail/203278.html" target="_blank">Agnieszka Piątkowska美食摄影作...</a>
+                    </div>
+                </li>
+                   
+                <li style="padding-left:10px;">
+                    <div class="xshdtopwz">
+                        <a href="http://www.manshijian.com/articles/article_detail/203277.html" target="_blank">希腊克里特岛风光摄影欣赏...</a>
+                    </div>
+                </li>
+                   
+                <li style="padding-left:10px;">
+                    <div class="xshdtopwz">
+                        <a href="http://www.manshijian.com/articles/article_detail/203276.html" target="_blank">Kevin Krautgartner地铁摄影欣赏...</a>
+                    </div>
+                </li>
+                   
+                <li style="padding-left:10px;">
+                    <div class="xshdtopwz">
+                        <a href="http://www.manshijian.com/articles/article_detail/203275.html" target="_blank">Griffin Lamb绝美壮观风光摄影欣...</a>
+                    </div>
+                </li>
+                   
+                <li style="padding-left:10px;">
+                    <div class="xshdtopwz">
+                        <a href="http://www.manshijian.com/articles/article_detail/203274.html" target="_blank">Alban Henderyckx壮观大气的风光...</a>
+                    </div>
+                </li>
+                            </ul>
+            <div class="clear"></div>
+                    
+                        
+                        
+            <div class="navbg">
+                <span>她的收藏夹</span>
+                <a href="http://www.manshijian.com/members/members_favourite_category_detail/68193.html">(全部)</a>
+            </div>
+            <ul class="xshd">
+                            </ul>
+        </div>
+    </div>    </div>
+
+<div class="footer">
+    <div class="foot">
+        <div class="understand">
+            <ul>
+                <li><b><a name="manshijian">了解慢时间</a></b></li>
+                <li><a href="http://www.manshijian.com/aboutus.html">关于我们</a></li> 
+                <li><a href="http://www.manshijian.com/agreement.html">使用协议</a></li>
+                <li><a href="http://www.manshijian.com/cooperation.html">商务合作</a></li>
+            </ul>
+        </div>
+    
+        <div class="user">
+            <ul>
+                <li><b>用户中心</b></li>
+                <li><a href="http://www.manshijian.com/feedback.html">意见反馈</a></li>
+                <li><a href="http://www.manshijian.com/faq.html">常见问题</a></li>
+                <li><a href="http://www.manshijian.com/guide.html">新手上路</a></li>
+            </ul>
+        </div>
+        <div class="weixin">
+            <ul>
+                <li><b>微信二维码</b></li>
+                <li><a href="http://www.manshijian.com/images/weixin.jpg" target="_blank"><img src="/static/img/weixin.png"></a></li> 
+            </ul>
+        </div>
+        <div class="service">
+            <ul>
+                <li><b>关注我们</b></li>
+                <li><i></i><a target="_blank" href="http://weibo.com/manshijian">新浪微博</a></li>
+                <li class="qq"><i></i><a target="_blank" href="http://t.qq.com/manshijianwang">腾讯微博</a></li>
+                <li class="douban"><i></i><a target="_blank" href="http://site.douban.com/184399/">豆瓣小站</a></li>
+            </ul>
+        </div>
+        <div class="slowtime">
+        <h1>慢时间</h1>
+          <ul>
+            <li><a href="javascript:void(0);" title="慢生活" rel="nofollow" id="my_phone_footer">手机版</a></li>
+            <li><a href="javascript:void(0);" title="慢文艺" rel="nofollow" id="client_ios">iPhone客户端</a></li>
+            <li><a href="javascript:void(0);" title="慢风景" rel="nofollow" id="client_android">安卓客户端</a></li>
+          </ul>
+        </div>
+            <div class="bottom">Copyright © 2011-2018 慢时间 | <a href="http://www.manshijian.com/" target="_blank">慢生活</a>社区，小清新网站 </div>
+  
+    </div>
+        <div class="go">
+    	<a title="返回顶部" class="top" href="#gotop"></a>
+    	<a title="如果您有意见，请反馈给我们！" class="feedback" href="" target="_blank"></a>
+    	<a title="返回底部" class="bottom" href="#gobottom"></a>
+    </div>
+        <a name="gobottom">&nbsp;</a>
+</div>
+
+
+<script type="text/javascript">
+var flag = "c6d4d16be943985aaa28c92783cd3620";
+var url = document.referrer;
+var current_url = window.location.href;
+var rand = 'MiqIl3to4SvoGKpaBn9gqNCVyGfd+92996/tlVez0Lc=';
+var member_id = '';
+var point_url = "http://www.manshijian.com/visitor/get_rand_point_verify.html";
+$(document).ready(function(){
+    $.post('/visitor',{'flag':flag,'url':url,'current_url':current_url},function(msg){
+        
+    },"json");
+    
+
+    
+    $("input[name='articles_keyword']").val('搜索您感兴趣的慢生活资讯和活动');
+    $("input[name='articles_keyword']").focusin(function(){
+        $("input[name='articles_keyword']").val('');
+    });
+    $("input[name='articles_keyword']").focusout(function(){
+        if($("input[name='articles_keyword']").val() == ''){
+            $("input[name='articles_keyword']").val('搜索您感兴趣的慢生活资讯和活动');
+        }
+    });
+
+});
+</script>
+
+<div id="hm_t_7997" class="hm-t-container">
+    <div class="hm-t-main" style="width:322px;height:322px;display:none">
+    <img src="/static/img/bigweixin.jpg" width="320" height="320" alt="官方微信" title="官方微信">
+    </div>
+    <div class="hm-t-side-arrow" style="display: none;"></div>
+    <div title="官方微信" class="hm-t-unfold-button hm-t-unfold-button-txt" style="cursor: default; font-size: 14px; line-height: 17px; padding-top: 3px; height: 37px;">官方微信</div>
+</div>
+<script type="text/javascript">
+        $("#change").click(function(){
+            translate();
+        })
+</script>
+</body>
+</html>

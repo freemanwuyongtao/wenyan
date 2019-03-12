@@ -1,0 +1,404 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link type="text/css" rel="stylesheet" href="/static/css/base.css">
+    <script type="text/javascript" src="/static/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/s.js"></script>
+    <script src="/static/js/language1.js"></script>
+    <script src="/static/js/index.js"></script>
+    <title>温言</title>
+    <meta name="keywords" content="温言">
+    <style>
+     .menu_bg .menu ul li {
+         padding: 0 10px; }
+ </style>
+</head>
+
+<body>
+    <div class="" style="display: none; position: absolute;">
+        <div class="aui_outer">
+            <table class="aui_border">
+                <tbody>
+                    <tr>
+                        <td class="aui_nw"></td>
+                        <td class="aui_n"></td>
+                        <td class="aui_ne"></td>
+                    </tr>
+                    <tr>
+                        <td class="aui_w"></td>
+                        <td class="aui_c">
+                            <div class="aui_inner">
+                                <table class="aui_dialog">
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2" class="aui_header">
+                                                <div class="aui_titleBar">
+                                                    <div class="aui_title" style="cursor: move; display: block;"></div>
+                                                    <a class="aui_close" href="javascript:/*artDialog*/;" style="display: block;">×</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="aui_icon" style="display: none;">
+                                                <div class="aui_iconBg" style="background: none;"></div>
+                                            </td>
+                                            <td class="aui_main" style="width: auto; height: auto;">
+                                                <div class="aui_content" style="padding: 20px 25px;"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="aui_footer">
+                                                <div class="aui_buttons" style="display: none;"></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="aui_e"></td>
+                    </tr>
+                    <tr>
+                        <td class="aui_sw"></td>
+                        <td class="aui_s"></td>
+                        <td class="aui_se" style="cursor: se-resize;"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+<a name="gotop"></a>
+<div class="menu_bg1" id="ajax_menu">
+    <div id="menu" style="position:relative; z-index:99999;">
+        <div class="login">
+            <ul>
+                <ul>
+                    <li class="login_id" style="display: none">0</li>
+                    <li class="mysharli2">
+                        <a href="/register">注册</a>
+                    </li>
+                    <li class="other">
+                        <a href="/login" class="hide" id="hide_login">登录</a>
+                        <ul>
+                            <li class="qq">
+                                <a onclick="window.location=&#39;/plugins/qq-oauth/oauth/login.php&#39;;return false;" href="javascript:void(0)" target="_blank">QQ登录</a>
+                            </li>
+                            <li class="sina">
+                                <a onclick="window.location=&#39;/plugins/weibo-oauth&#39;;return false;" href="javascript:void(0)" target="_blank">新浪微博</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="http://www.manshijian.com/members/get_member_password.html#" onclick="AddFavorite(window.location,document.title)" title="慢时间" rel="sidebar" class="favorit">加入收藏</a>
+                    </li>
+                    <li class="mysharli">
+                        <a href="" id="change">简繁体切换</a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="search">
+    <div class="logo"><a href="http://www.manshijian.com/">慢生活</a></div>
+    <form action="http://www.manshijian.com/search.html" method="post" accept-charset="utf-8" id="article_search" class="sns-form" enctype="multipart/form-data">    
+        <div class="searcher">
+        <ul>
+            <li>
+                <div class="text">
+                    <input name="articles_keyword" type="text" maxlength="30" style="width:220px; height:30px; line-height:30px; float:left; background:none; border:none; color:#666;">
+                </div>
+            </li>
+            <li><input name="articles_search_button" type="submit" class="botton" value=""></li>
+        </ul>
+    </div>
+    </form>
+</div>
+<div class="menu_bg">
+    <div id="menu">
+        <div class="menu">
+            <ul>
+                <li class="find">
+                    <a href="/">首页</a>
+                </li>
+                <li>
+                    <a rel="nofollow" class="hide" href="#">失恋33天</a>
+                    <ul>
+                    </ul>
+                </li>
+                <li>
+                <a class="hide" href="#">一别两宽</a>
+                </li>
+                <li>
+                    <a class="hide" href="#">各生欢喜</a>
+                    <ul>
+                    </ul>
+                </li>
+                <li>
+                    <a class="hide" href="3">再逢亦友</a>
+                    <ul>
+                    </ul>
+                </li>
+                <li>
+                    <a class="hide" href="#">交谈甚欢</a>
+                    <ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" style="width:95px;">发现美好</a>
+                </li>
+                <li>
+                    <a class="hide" href="#">心里咨询</a>
+                    <ul>
+                        <li><a href="">治愈音乐</a></li>
+                        <li><a href="">治愈书籍</a></li>
+                        <li><a href="">治愈电影</a></li>
+                        <li><a href="">线上咨询</a></li>
+                        <li><a href="">到店咨询</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<div class="register">
+	<h1><span class="green_color">慢时间</span>找回密码</h1>
+	<div class="form">
+		<form action="" method="post" accept-charset="utf-8" id="get_password" class="get_password">
+            <ul>
+				<li>
+                    <label>手机号</label>
+                    <span>
+                        <input type="text" name="mobile" value="" id="mobile" class="input_text">               
+                    </span>
+                    <span id="getverify" style="position:relative;cursor: pointer;">点击获取验证码</span>
+                </li>
+                <li>
+                    <label>验证码</label>
+                    <span>
+                        <input type="text" name="captch" value="" id="captch" class="input_text" style="width:125px;">
+                        <input type="hidden" name="m_token" value="SWVLV1RiejhGcm9EWVA3ek9qN3grMWJGajJkZTBsVUNrMmlkL0xGai9HRT0=">
+                    </span>
+                    <em class="captch_errorInfo errorInfo checkp" id="sms_notice"></em>
+                </li>
+                <li style="display: none;">
+                    <label>密码</label>
+                    <span>
+                        <input type="password" name="password" value="" id="res_password" class="input_text">               
+                    </span>
+                    <em class="password_errorInfo errorInfo checkp"></em>
+                </li>
+                <li style="display:none;">
+                    <label>确认密码</label>
+                    <span>
+                        <input type="password" name="re_pass" value="" id="re_pass" class="input_text">             
+                    </span>
+                    <em class="re_pass_errorInfo errorInfo checkp"></em>
+                </li>
+				<li>
+                    <input name="submit" type="submit" value="找回密码" class="btn-reg">
+                </li>
+			</ul>
+		</form>		
+    </div>
+	</div>
+
+<script type="text/javascript">
+$(function(){
+    
+    $("#res_password").focus(function(){
+        $('.password_errorInfo').html("密码长度不得少于6");
+        $('.password_errorInfo').css('color', 'black');
+    }).blur(function(){
+        var passwordval = $('#res_password').val();
+        if(passwordval.length >=6 ){
+            $('.password_errorInfo').html("输入正确");
+            $('.password_errorInfo').css('color','green');
+        }else{
+            $('.password_errorInfo').html("输入错误");
+            $('.password_errorInfo').css('color','red');
+        }
+    });
+
+    $("#re_pass").focus(function(){
+        $('.re_pass_errorInfo').html("请输入密码");
+        $('.re_pass_errorInfo').css('color', 'black');
+    }).blur(function(){
+        var passwordval = $('#re_pass').val();
+        if(passwordval.length >=6 && passwordval == $('#res_password').val()){
+            $('.re_pass_errorInfo').html("输入正确");
+            $('.re_pass_errorInfo').css('color','green');
+        }else{
+            $('.re_pass_errorInfo').html("两次密码输入不一致");
+            $('.re_pass_errorInfo').css('color','red');
+        }
+    });
+
+    $("#captch").focus(function(){
+        $('.captch_errorInfo').html("请输入手机验证码");
+        $('.captch_errorInfo').css('color', 'black');
+    }).keyup(function(){
+        var captchval = $('#captch').val();
+        $.post('http://www.manshijian.com/site/check_sms_code',{'captch':captchval},function(msg){
+            if(msg == 0){
+                $('.captch_errorInfo').html("手机验证码错误");
+                $('.captch_errorInfo').css('color','red');
+            }else{
+                $('.captch_errorInfo').html("输入正确");
+                $('.captch_errorInfo').css('color','green');
+            }
+        });
+    });
+    
+    $("#getverify").click(function(){
+        var mobile = $("input[name='mobile']").val();
+        $.post('http://www.manshijian.com/site/get_sms',{'mobile':mobile},function(msg){
+            $("#sms_notice").html(msg);
+        });
+    });
+    
+    $("#res_submit").click(function(){
+        var statu = 4;
+        $('.checkp').each(function(){
+            if ($(this).html() == '输入正确') {
+                statu--;
+            }
+        })
+        
+        if(statu != 0){
+            return false;
+        }
+    })
+})
+</script>
+<!-- 
+<script type="text/javascript">
+$(document).ready(function () {
+    $('#code').focusin(function(){
+        $('#image').show('fast');
+    });
+    
+    $("#get_password").submit(function(){
+        var emailval = $('#email').val();
+        if(!emailval.match(/^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*$/)){
+            alert('您输入的格式不正确,请重新输入');
+            $('#email').focus();
+            return false;
+        }
+        
+        var codeval = $('#code').val();
+        if(codeval == ''){
+            alert('请您输入验证码');
+            $('#code').focus();
+            return false;
+        }
+        
+    });
+});
+
+$(function(){
+	var img = $("#image").find('img');
+	$(img).live('hover',function(){
+		$(this).css("cursor","pointer")
+        $(this).attr('title',"单击更换");
+	}).live('click',function(){
+		$.post('/manage/site/refresh_captch',function(refresh){
+			$('#refresh').html(refresh);
+		});
+	})
+})
+</script> -->
+
+<div class="footer">
+    <div class="foot">
+        <div class="understand">
+            <ul>
+                <li><b><a name="manshijian">了解慢时间</a></b></li>
+                <li><a href="http://www.manshijian.com/aboutus.html">关于我们</a></li> 
+                <li><a href="http://www.manshijian.com/agreement.html">使用协议</a></li>
+                <li><a href="http://www.manshijian.com/cooperation.html">商务合作</a></li>
+            </ul>
+        </div>
+    
+        <div class="user">
+            <ul>
+                <li><b>用户中心</b></li>
+                <li><a href="http://www.manshijian.com/feedback.html">意见反馈</a></li>
+                <li><a href="http://www.manshijian.com/faq.html">常见问题</a></li>
+                <li><a href="http://www.manshijian.com/guide.html">新手上路</a></li>
+            </ul>
+        </div>
+        <div class="weixin">
+            <ul>
+                <li><b>微信二维码</b></li>
+                <li><a href="http://www.manshijian.com/images/weixin.jpg" target="_blank"><img src="/static/img/weixin.png"></a></li>
+            </ul>
+        </div>
+        <div class="service">
+            <ul>
+                <li><b>关注我们</b></li>
+                <li><i></i><a target="_blank" href="http://weibo.com/manshijian">新浪微博</a></li>
+                <li class="qq"><i></i><a target="_blank" href="http://t.qq.com/manshijianwang">腾讯微博</a></li>
+                <li class="douban"><i></i><a target="_blank" href="http://site.douban.com/184399/">豆瓣小站</a></li>
+            </ul>
+        </div>
+        <div class="slowtime">
+        <h1>慢时间</h1>
+          <ul>
+            <li><a href="javascript:void(0);" title="慢生活" rel="nofollow" id="my_phone_footer">手机版</a></li>
+            <li><a href="javascript:void(0);" title="慢文艺" rel="nofollow" id="client_ios">iPhone客户端</a></li>
+            <li><a href="javascript:void(0);" title="慢风景" rel="nofollow" id="client_android">安卓客户端</a></li>
+          </ul>
+        </div>
+        <div class="bottom">Copyright © 2011-2018 慢时间 | <a href="http://www.manshijian.com/" target="_blank">慢生活</a>社区，小清新网站 
+        </div>
+        <div class="go">
+    	<a title="返回顶部" class="top" href="#gotop"></a>
+    	<a title="如果您有意见，请反馈给我们！" class="feedback" href="http://www.manshijian.com/feedback.html" target="_blank"></a>
+    	<a title="返回底部" class="bottom" href="#gobottom"></a>
+        </div>
+        <a name="gobottom">&nbsp;</a>
+    </div>
+</div>
+
+    <script type="text/javascript">
+var flag = "c6d4d16be943985aaa28c92783cd3620";
+var url = document.referrer;
+var current_url = window.location.href;
+var rand = 'zYEDDHDEx5mTs9410DECIfPVxZVn5pIwqkAcUUdVHi8=';
+var member_id = '';
+var point_url = "http://www.manshijian.com/visitor/get_rand_point_verify.html";
+$(document).ready(function(){
+    $.post('/visitor',{'flag':flag,'url':url,'current_url':current_url},function(msg){
+        
+    },"json");   
+    
+    $("input[name='articles_keyword']").val('搜索您感兴趣的慢生活资讯和活动');
+    $("input[name='articles_keyword']").focusin(function(){
+        $("input[name='articles_keyword']").val('');
+    });
+    $("input[name='articles_keyword']").focusout(function(){
+        if($("input[name='articles_keyword']").val() == ''){
+            $("input[name='articles_keyword']").val('搜索您感兴趣的慢生活资讯和活动');
+        }
+    });
+});
+</script>
+<script type="text/javascript">
+        $("#change").click(function(){
+            translate();
+        })
+</script>
+
+<div id="hm_t_7997" class="hm-t-container">
+    <div class="hm-t-main" style="width: 322px; height: 322px; display: none;">
+        <img src="/static/img/bigweixin.jpg" width="320" height="320" alt="官方微信" title="官方微信">
+    </div>
+    <div class="hm-t-side-arrow" style="display: none;"></div>
+    <div title="官方微信" class="hm-t-unfold-button hm-t-unfold-button-txt" style="cursor: default; font-size: 14px; line-height: 17px; padding-top: 3px; height: 37px;">官方微信</div>
+</div>
+</body>
+</html>

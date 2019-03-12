@@ -1,0 +1,625 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="/static/css/base.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/home.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/login.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/green.css">
+    <script charset="utf-8" src="/static/js/s.js"></script>
+    <script type="text/javascript" src="/static/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/artDialog.js"></script>
+    <script src="/static/js/language1.js"></script>
+    <script src="/static/js/index.js"></script>
+    <title>温言</title>
+</head>
+<body>
+    <div class="" style="display: none; position: absolute;">
+        <div class="aui_outer">
+            <table class="aui_border">
+                <tbody>
+                    <tr>
+                        <td class="aui_nw"></td>
+                        <td class="aui_n"></td>
+                        <td class="aui_ne"></td>
+                    </tr>
+                    <tr>
+                        <td class="aui_w"></td>
+                        <td class="aui_c">
+                            <div class="aui_inner">
+                                <table class="aui_dialog">
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2" class="aui_header">
+                                                <div class="aui_titleBar">
+                                                    <div class="aui_title" style="cursor: move; display: block;"></div>
+                                                    <a class="aui_close" href="javascript:/*artDialog*/;" style="display: block;">×</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="aui_icon" style="display: none;">
+                                                <div class="aui_iconBg" style="background: none;"></div>
+                                            </td>
+                                            <td class="aui_main" style="width: auto; height: auto;">
+                                                <div class="aui_content" style="padding: 20px 25px;"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="aui_footer">
+                                                <div class="aui_buttons" style="display: none;"></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="aui_e"></td>
+                    </tr>
+                    <tr>
+                        <td class="aui_sw"></td>
+                        <td class="aui_s"></td>
+                        <td class="aui_se" style="cursor: se-resize;"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="" style="display: none; position: absolute;">
+        <div class="aui_outer">
+            <table class="aui_border">
+                <tbody>
+                    <tr>
+                        <td class="aui_nw"></td>
+                        <td class="aui_n"></td>
+                        <td class="aui_ne"></td>
+                    </tr>
+                    <tr>
+                        <td class="aui_w"></td>
+                        <td class="aui_c">
+                            <div class="aui_inner">
+                                <table class="aui_dialog">
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2" class="aui_header">
+                                                <div class="aui_titleBar">
+                                                    <div class="aui_title" style="cursor: move; display: block;"></div>
+                                                    <a class="aui_close" href="javascript:/*artDialog*/;" style="display: block;">×</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="aui_icon" style="display: none;">
+                                                <div class="aui_iconBg" style="background: none;"></div>
+                                            </td>
+                                            <td class="aui_main" style="width: auto; height: auto;">
+                                                <div class="aui_content" style="padding: 20px 25px;"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="aui_footer">
+                                                <div class="aui_buttons" style="display: none;"></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="aui_e"></td>
+                    </tr>
+                    <tr>
+                        <td class="aui_sw"></td>
+                        <td class="aui_s"></td>
+                        <td class="aui_se" style="cursor: se-resize;"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+<a name="gotop"></a>
+<div class="menu_bg1" id="ajax_menu">
+    <div id="menu" style="position:relative; z-index:99999;">
+        <div class="login">
+            <ul>
+                <ul>
+                    <li class="login_id" style="display: none">0</li>
+                    <li class="mysharli2" >
+                        <a href="/register">注册</a>
+                    </li>
+                    <li class="other">
+                        <a href="/login" class="hide" id="hide_login">登录</a>
+                    </li>
+                    <li class="other1">
+                        <a href=""  title="" rel="sidebar" class="favorit">加入收藏</a>
+                    </li>
+                    <li class="mysharli">
+                        <a href="" id="change">简繁体切换</a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+</div>
+    <script>
+function login(uid){
+    art.dialog({
+        title: '基本信息',
+        fixed: true,
+        background: '#333333',
+        opacity: 0.5,
+        content: '<div class="register_pop">' +
+            '<div class="form">' +
+            '<form action="/information/" method="post" enctype="multipart/form-data">' +
+            '<ul>' +
+            '<li>' +
+            '<input type="hidden" name="userid" value="'+ uid +'">'+
+            '</li>'+
+            '<li>' +
+            '<label>姓名</label>' +
+            '<span><input name="uname" id="login_email" type="text" class="input_text"/></span></li>' +
+            '<li><label>年龄</label><span><input name="uage" id="age" type="text" class="input_text"/></span><em class="login_password_errorInfo" id="login_errorInfo"></em></li>' +
+            '<li><label>性别</label><span><input type="radio" name="gender" value="male" checked="checked">男' +
+            '&nbsp;&nbsp;<input type="radio" name="gender" value="female">女</span><em class="login_password_errorInfo" id="login_errorInfo"></em></li>' +
+            '<li><label>城市</label><span><input name="city" id="city" type="text" class="input_text"/></span><em class="login_password_errorInfo" id="login_errorInfo"></em></li>' +
+            '<li><label>上传头像</label><span><input name="uimg" id="picture" type="file" ></span><em class="login_password_errorInfo" id="login_errorInfo"></em></li>' +
+            '<li>' +
+            '<input id="ajaxlogin" name="ajaxlogin" type="submit" value="保存" class="btn-reg">' +
+            '</li>' +
+            '</ul>' +
+            '</form><div class="other-list"></div>' +
+            '</div>' +
+            '</div>'
+    });
+}
+function login1(){
+    art.dialog({
+        title: '用户登录',
+        fixed: true,
+        background: '#333333',
+        opacity: 0.5,
+        content: '<div class="register_pop">' +
+            '<h1>欢迎登录<span class="green_title">温言</span></h1>' +
+            '<div class="form">' +
+            '<form action="/login/" method="post">' +
+            '<ul>' +
+            '<li>' +
+            '<label>用户名</label>' +
+            '<span><input name="uname" id="login_name" type="text" class="input_text"/></span>' +
+            '<em class="login_email_name"></em>' +
+            '</li>' +
+            '<li>' +
+            '<label>密码</label>' +
+            '<span><input name="password" id="password" type="password" class="input_text"/></span><em class="login_password_upwd" id="login_errorInfo"></em>' +
+            '</li>' +
+            '<li><span style="padding-left:110px;"><a href="/forget">忘记密码？</a></span></li>' +
+            '<li><input id="ajaxlogin" name="ajaxlogin" type="submit"  value="登录" class="btn-reg" /></li></ul></form><div class="other-list"></div></div></div>'
+    })
+}
+</script>
+<div class="search">
+    <div class="logo"><a href="/">温言</a></div>
+    <form action="" method="post" accept-charset="utf-8" id="article_search" class="sns-form" enctype="multipart/form-data">    
+        <div class="searcher">
+        <ul>
+            <li>
+                <div class="text">
+                    <input name="articles_keyword" type="text" maxlength="30" style="width:220px; height:30px; line-height:30px; float:left; background:none; border:none; color:#666;">
+                </div>
+            </li>
+            <li><input name="articles_search_button" type="submit" class="botton" value=""></li>
+        </ul>
+    </div>
+    </form>
+</div>
+<div class="menu_bg">
+    <div id="menu">
+        <div class="menu">
+            <ul>
+                <li class="find">
+                    <a href="/">首页</a>
+                </li>
+                <li>
+                    <a rel="nofollow" class="hide" href="#">失恋33天</a>
+                </li>
+                <li>
+                <a class="hide" href="#">一别两宽</a>
+                </li>
+                <li>
+                    <a class="hide" href="#">各生欢喜</a>
+                </li>
+                <li>
+                    <a class="hide" href="3">再逢亦友</a>
+                </li>
+                <li>
+                    <a class="hide" href="#">交谈甚欢</a>
+                </li>
+                <li>
+                    <a href="#" style="width:95px;">发现美好</a>
+                </li>
+                <li>
+                    <a class="hide" href="#">心里咨询</a>
+                    <ul>
+                        <li><a href="">治愈音乐</a></li>
+                        <li><a href="">治愈书籍</a></li>
+                        <li><a href="">治愈电影</a></li>
+                        <li><a href="">线上咨询</a></li>
+                        <li><a href="">到店咨询</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<div class="body_main nobackground">
+	<div class="left">
+                <div class="left_body_news">
+            <div class="title">
+                <h1>
+                    失恋33天                    
+                    <a href="" title="最新资讯">最新</a>
+                    <a href="" title="热门资讯">热门</a>
+                    <a href="" title="精华资讯">精华</a>
+                </h1>
+            </div>
+            
+            <div class="W_linka">
+                 <div class="home_pic"><a href="/info" target="_blank"><img src="/static/img/5ac56093f31ea419500f7b916bf4a796.jpg" width="160" height="120"></a></div>
+                                
+            <div class="home_text_long">
+                <dl class="feed_list W_linecolor">
+                    <dd class="content">
+                        <h1>
+                            <a href="/info" target="_blank">李安：我不教小孩孝顺，我只要他爱我</a>
+                        </h1>
+                            <dl class="comment">
+                                这是早年李安导演拍完父亲三部曲的《喜宴》之后，接受采访时候说的一段话：（除李安外的画面皆来自电影《喜宴》）（李安和儿子李淳近照）李安提到，中国自古以来的所谓“孝顺”，其实是有一个不平等的阶级观念在里面，认定小孩一定要服从家长，要“顺”，它跟...                     
+                            </dl>
+                            <p class="info W_linkb W_textb">
+                                <span>2016-12-02 21:30:00</span>
+                                <span style="float:right">
+                                    <a href="javascript:void(0);" class="love_2" id="article_like_196755">赞(11)</a>
+                                    <a href="javascript:void(0)" class="favourite" id="favourite_196755">收藏(0)</a>
+                                    <a href="http://www.manshijian.com/articles/article_detail/196755.html#comment_container" class="review_2">回复(0)</a>
+                                </span>
+                            </p>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="clear"></div>
+            </div>
+                       
+                    </div>
+        <div class="clear"></div>
+        <div class="list_p4">
+			<div class="pages">
+				<ul>
+					<li><span class="current">1</span></li><li><a href="http://www.manshijian.com/articles/rec_category/manshenghuo/2">2</a></li><li><a href="http://www.manshijian.com/articles/rec_category/manshenghuo/3">3</a></li><li><a href="http://www.manshijian.com/articles/rec_category/manshenghuo/4">4</a></li><li><a href="http://www.manshijian.com/articles/rec_category/manshenghuo/5">5</a></li><li><a href="http://www.manshijian.com/articles/rec_category/manshenghuo/6">6</a></li><li><a href="http://www.manshijian.com/articles/rec_category/manshenghuo/2">&gt;</a></li><li><a href="http://www.manshijian.com/articles/rec_category/manshenghuo/10">&gt;&gt;</a></li>				</ul>
+			</div>
+        </div>
+	</div>
+<div class="right">
+    <div class="body_right_four">
+        <a href="/release" class="decline">文章发布</a>
+        <a href="" class="accept">活动发布</a>
+    </div>
+  
+<div class="body_right_one">
+    <h1>热门标签 　　　　
+        <b>
+            <a href="/">[所有热门标签]</a></b></h1>
+        <ul>
+        <span>慢生活</span>
+                <li><a href="http://www.manshijian.com/articles/tag/MmtzYUJJUWxSTnF5RWpQL2xmZDFDRTlZQXYvNXIzRU5aTGlyRE1CUXlxVT0=.html">慢生活</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/K2ZEcmZPdlV0b1J3WVdFUmJBSHloeWNwVFRVcUxtL21KelZGSlZSY1prbz0=.html">美食</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/RHdadGtRT2N4UGNRbFFFSjlPVlVFbnhJYmF5dllLaWNWUGpIMjNiVjllMD0=.html">创意</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/T1FDaEpMdHhjVzh3eVFXQ1dJamMrUHY0a3VpYmhOSGZMRzRCMjZWMGFtWT0=.html">食谱</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/Y1VRVU5sT1NjOEVGbVpGaE5GZkJvV29FQmVBWGRseWlrcU5DaU8rNU9Tdz0=.html">家居</a></li>
+                <li><a href="http://www.manshijian.com/articles/tags/1.html">更多...</a></li>
+    </ul>
+        <ul>
+        <span>慢风景</span>
+                <li><a href="http://www.manshijian.com/articles/tag/MVlsYmYxUmh1VHJIQnNnOCt0SnRrUHBieHZsYlJKMEJIOHdzcStSMU1zQT0=.html">摄影</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/MmtzYUJJUWxSTnF5RWpQL2xmZDFDRTlZQXYvNXIzRU5aTGlyRE1CUXlxVT0=.html">慢生活</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/TGdyT2hmSEdEZ0NVTDU1WnpwSFcybFh6V3RFVDB1a2FxMGlpMHZMbS9yUT0=.html">旅行</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/YXV5ZUZHbDh4NzlTN0VsV1ppT1JVUVZrd2R4cUdDSWVaZGY4YWpacldiND0=.html">风景</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/ak1hLzZGblJLcTlYRlR0UEYrWVVlaVVNVit5VStIMDN4QmRYaDZaVG4xQT0=.html">人文</a></li>
+                <li><a href="http://www.manshijian.com/articles/tags/2.html">更多...</a></li>
+    </ul>
+        <ul>
+        <span>慢文艺</span>
+                <li><a href="http://www.manshijian.com/articles/tag/YndNSjZZMEJ4RnBMSHhNT2FsMFhBZTMwejFJS1cvWWUzN0RxUFNxWHRwZz0=.html">随笔</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/QVpwWE5FWUp4QW5BRTVIUzVNMmpnZlM3M243WU9OYXJlZjZ0TmN2aFVvRT0=.html">心情</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/aDBlUUZQVnI1a3lVclZCVm5QdVAwZjVBcWRtSEVubmxSQkRUM3c0UTVHWT0=.html">美文</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/Ryt1blNrQWVpNkdQWEhBdmtEd0xKQXo5eE9tSzFNT1RMU09vMkRNTkZWND0=.html">小文艺</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/MFBvUFBXR3dtYVhsSmQrMXFUZjRPdytlUHRpL2kvSGFEOFN4Tk1pTmxVaz0=.html">插画</a></li>
+                <li><a href="http://www.manshijian.com/articles/tags/3.html">更多...</a></li>
+    </ul>
+        <ul>
+        <span>慢一族</span>
+                <li><a href="http://www.manshijian.com/articles/tag/MmtzYUJJUWxSTnF5RWpQL2xmZDFDRTlZQXYvNXIzRU5aTGlyRE1CUXlxVT0=.html">慢生活</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/WHZtcy84OUhodERrRnI5NTlRazlqdVZ3eGpSVmE5dmlqV3o0U1ZvR1M5WT0=.html">梦想</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/YVhXMGd3RGtNUDl2RUlMODhPRkV5QU4xdEljWXBuUEtrYWhPMnJpSnRPTT0=.html">文艺</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/aXoyVkRJMXJXY2dRU0czYzlsUWpLWWtUelJCUGdEVm85ZHBPWk4yQ1Q1Zz0=.html">明星</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/V2lVbWpXVkFicDRsZVQ3QmNwMWdReUpnR2hPblFYRjJURUlnZ2QySHMrVT0=.html">手工客</a></li>
+                <li><a href="http://www.manshijian.com/articles/tags/4.html">更多...</a></li>
+    </ul>
+        <ul>
+        <span>慢公益</span>
+                <li><a href="http://www.manshijian.com/articles/tag/cmd2TnRqa3dYNm4xSUp6Z2VkbVhoOHFoNTdsMTBveDI4NnB3dGVXU3cyND0=.html">公益</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/VlNPMk9LbVY0dE8reDJ0Ym1tRElvRWttQVVkeXl2YjBvcFJJQ3BOcTljQT0=.html">深圳</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/TForODdqbnNGbzU1SkdqeFN1SVVlajFTZENwMG9wUFNsSC9LdkFFOFpQND0=.html">谢谢</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/bCtocGdycFZBcjVKV21tVzQ1WWkrTndSSVIxbVNvYmlxVDZROXNCb3d4TT0=.html">爱</a></li>
+                <li><a href="http://www.manshijian.com/articles/tag/K1NpTi9DWHVvYkw1NlkwMktUSkFlYWtGTjNRbHNBOFJmaXVkbmlyM2VUST0=.html">语言</a></li>
+                <li><a href="http://www.manshijian.com/articles/tags/40.html">更多...</a></li>
+    </ul>
+    </div>
+<div class="body_right_three">
+    <h1>热门资讯</h1>
+    <ul>
+                <li>
+           <a href="">
+                晴天娃娃小制作            </a>
+            <span>10月15日</span>
+        </li>
+                <li>
+           <a href="">
+                用水果制作小动物，用蔬菜...            </a>
+            <span>10月30日</span>
+        </li>
+                <li>
+           <a href="">
+                跳皮筋的玩法（附儿歌歌词...            </a>
+            <span>05月31日</span>
+        </li>
+                <li>
+           <a href="">
+                抓石子、拾石子的玩法和游...            </a>
+            <span>05月30日</span>
+        </li>
+                <li>
+           <a href="">
+                猪爪折纸，东西南北的玩法...            </a>
+            <span>05月30日</span>
+        </li>
+                <li>
+           <a href="">
+                饮料瓶手工制作美丽花瓶...            </a>
+            <span>03月21日</span>
+        </li>
+                <li>
+           <a href="">
+                要想成为一个自信有魅力的...            </a>
+            <span>03月14日</span>
+        </li>
+                <li>
+           <a href="">
+                玫瑰花的折法：如何用钱折...            </a>
+            <span>03月22日</span>
+        </li>
+                <li>
+           <a href="">
+                夏日清新爽口凉拌菜...            </a>
+            <span>06月27日</span>
+        </li>
+                <li>
+           <a href="">
+                Elie Saab：中东走出的典...            </a>
+            <span>02月22日</span>
+        </li>
+            </ul>
+</div>
+<div class="clear"></div>   
+    </div>
+</div>
+<div>
+        <div class="category_id_name" id="manshenghuo.html"></div>
+    <div class="category_page_number" id=""></div>
+</div>
+<div class="masque" style="display:none; top:0px; position:fixed; 1px solid #0f0000; width: 100%; height: 100%; background:#000000; opacity:0.65; z-index:99999 ">123</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#follow").live('click',function(){
+            var member_follow_id = $("#hidden_member").val();
+            $.post('',{'member_follow_id':member_follow_id},function(msg){
+                if(msg.flag == 'guest'){
+                    alert(msg.info);
+                    window.location.href='/members/login/member_detail_' + member_follow_id;
+                } else {
+                    $('#follow').html(msg.info);
+                }
+            },"json");
+        })
+        
+        $("#sendMessage").live('click',function(){
+            var member_id = $("#hidden_member").val();
+            window.location.href='/members/member_message/' + member_id;
+        })
+    });
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.favourite').click(function(){
+        var article_id = $(this).attr('id');
+        var category_id_name = $('.category_id_name').attr('id');
+        var category_page_number = $('.category_page_number').attr('id');
+        $.post('/members/members_favourite_category',{'article_id':article_id},function(result){
+            if(result.flag == '1'){
+                var dialog = art.dialog({
+                    id: 'favourite',
+                    left: '37.8%',
+                    top: '16.5%',
+                    height: '16.5%',
+                    cancel:false,
+                    close: function(){
+                        $('.masque').hide();
+                    }
+                });
+                $.ajax({
+                    url: '/images/frontpage/favourite/tanchuan.html',
+                    success: function (data){
+                        dialog.content(data);
+                        $('.tt').html(result.info);
+                        if(result.flag_ed == '3'){
+                            $('#'+result.info_ed).append("<div class='xz'><a href='javescript:voice(0);'><img src='/images/frontpage/favourite/msj-tb.jpg' /></a></div>");
+                        }
+                        $('.masque').show();
+                    }
+                })
+                $('#closer').live("click",function(){ 
+                    dialog.close();
+                })
+            }else if(result.flag == '2'){
+                alert(result.info);
+                window.location.href='/members/login/backtohome_category/'+category_id_name+'/'+category_page_number;
+            }
+        },"json")
+        
+        $('.categorys').die().live("click", function(){
+            var category_id = $(this).attr('id');
+            $('.categorys_edit').removeClass('.categorys');
+            $(this).removeClass('.categorys_edit');
+            $('.xz').remove();
+            $('#'+category_id).append("<div class='xz'><a href='javescript:voice(0);'><img src='/images/frontpage/favourite/msj-tb.jpg' /></a></div>");
+            
+            $.post('/members/member_favorite_add',{'article_id':article_id,'category_id':category_id,'type':'list'},function(msg){
+                $("#"+article_id).html(msg.info);
+            },"json")
+        })
+    }); 
+    
+    //新建收藏夹
+    $('.leftwz').die().live("click", function(){
+        var d = art.dialog.load('/images/frontpage/favourite/tanchuanadd.html',{
+            lock: true,
+            cancel:false,
+            opacity: '0'
+        });
+        $('.btn_id').die().live("click", function(){
+            var category_name = $('#category_name').attr('value');
+            var category_description = $('#category_description').attr('value');
+            var privacy = $(".dxk:checked").val();
+            if(category_name == ''){
+                alert('请输入标题');
+            }else if($('#dxk_one').attr("checked")!=="checked" && $('#dxk_two').attr("checked")!=="checked"){
+                alert('请当前设置收藏夹权限');
+            }else{
+                $.post('/members/members_favourite_category_add',{'category_name':category_name,'category_description':category_description,'privacy':privacy},function(result){
+                    if(result.flag == '1'){
+                        $.ajax({
+                            url: '/members/members_favourite_category',
+                            dataType : 'json',
+                            success: function (data){
+                                $(".tt").html(data.info);
+                                d.close();
+                            }
+                        })
+                    }else{
+                        alert('最多只能创建15个收藏夹');
+                        d.close();
+                    }
+                },"json")
+            }
+        })
+        $('#close').live("click",function(){ 
+            d.close();
+        })
+    })
+})
+</script>
+<div class="footer">
+    <div class="foot">
+        <div class="understand">
+            <ul>
+                <li><b><a name="manshijian">了解慢时间</a></b></li>
+                <li><a href="http://www.manshijian.com/aboutus.html">关于我们</a></li> 
+                <li><a href="http://www.manshijian.com/agreement.html">使用协议</a></li>
+                <li><a href="http://www.manshijian.com/cooperation.html">商务合作</a></li>
+            </ul>
+        </div>
+    
+        <div class="user">
+            <ul>
+                <li><b>用户中心</b></li>
+                <li><a href="http://www.manshijian.com/feedback.html">意见反馈</a></li>
+                <li><a href="http://www.manshijian.com/faq.html">常见问题</a></li>
+                <li><a href="http://www.manshijian.com/guide.html">新手上路</a></li>
+            </ul>
+        </div>
+        <div class="weixin">
+            <ul>
+                <li><b>微信二维码</b></li>
+                <li><a href="" target="_blank"><img src="/static/img/weixin.png"></a></li> 
+            </ul>
+        </div>
+        <div class="service">
+            <ul>
+                <li><b>关注我们</b></li>
+                <li><i></i><a target="_blank" href="http://weibo.com/manshijian">新浪微博</a></li>
+                <li class="qq"><i></i><a target="_blank" href="http://t.qq.com/manshijianwang">腾讯微博</a></li>
+                <li class="douban"><i></i><a target="_blank" href="http://site.douban.com/184399/">豆瓣小站</a></li>
+            </ul>
+        </div>
+        <div class="slowtime">
+        <h1>慢时间</h1>
+          <ul>
+            <li><a href="javascript:void(0);" title="慢生活" rel="nofollow" id="my_phone_footer">手机版</a></li>
+            <li><a href="javascript:void(0);" title="慢文艺" rel="nofollow" id="client_ios">iPhone客户端</a></li>
+            <li><a href="javascript:void(0);" title="慢风景" rel="nofollow" id="client_android">安卓客户端</a></li>
+          </ul>
+        </div>
+            <div class="bottom">Copyright © 2011-2018 慢时间 | <a href="/" target="_blank">温言</a>社区，小清新网站 
+            </div>
+    </div>
+        <div class="go">
+    	<a title="返回顶部" class="top" href="#gotop"></a>
+    	<a title="如果您有意见，请反馈给我们！" class="feedback" href="" target="_blank"></a>
+    	<a title="返回底部" class="bottom" href="#gobottom"></a>
+    </div>
+        <a name="gobottom">&nbsp;</a>
+</div>
+
+
+<script type="text/javascript">
+var flag = "c6d4d16be943985aaa28c92783cd3620";
+var url = document.referrer;
+var current_url = window.location.href;
+var rand = '7m/SuNnOFgag1zvYU3qOgLjzUMpCoZFtVKHv93+l+AM=';
+var member_id = '';
+var point_url = "http://www.manshijian.com/visitor/get_rand_point_verify.html";
+$(document).ready(function(){
+    $.post('/visitor',{'flag':flag,'url':url,'current_url':current_url},function(msg){
+        
+    },"json");
+
+    
+    $("input[name='articles_keyword']").val('搜索您感兴趣的慢生活资讯和活动');
+    $("input[name='articles_keyword']").focusin(function(){
+        $("input[name='articles_keyword']").val('');
+    });
+    $("input[name='articles_keyword']").focusout(function(){
+        if($("input[name='articles_keyword']").val() == ''){
+            $("input[name='articles_keyword']").val('搜索您感兴趣的慢生活资讯和活动');
+        }
+    });
+    
+});
+</script>
+
+<div style="display: none; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; cursor: move; opacity: 0; background: rgb(255, 255, 255);">
+</div>
+<div id="hm_t_7997" class="hm-t-container">
+    <div class="hm-t-main" style="width:322px;height:322px;display:none">
+        <img src="/static/img/bigweixin.jpg" width="320" height="320" alt="官方微信" title="官方微信">
+    </div>
+    <div class="hm-t-side-arrow" style="display: none;"></div>
+    <div title="官方微信" class="hm-t-unfold-button hm-t-unfold-button-txt" style="cursor: default; font-size: 14px; line-height: 17px; padding-top: 3px; height: 37px;">官方微信</div>
+</div>
+<script type="text/javascript">
+        $("#change").click(function(){
+            translate();
+        })
+</script>
+</body>
+</html>

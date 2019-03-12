@@ -1,0 +1,765 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0026)http://www.manshijian.com/ -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link type="text/css" rel="stylesheet" href="/static/css/base.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/home.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/login.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/green.css">
+    <script charset="utf-8" src="/static/js/s.js"></script>
+    <script type="text/javascript" src="/static/js/jquery-1.7.1.min.js"></script>
+{#    <script type="text/javascript" src="/static/js/common.js"></script>#}
+{#    <script src="/static/js/wb.js" type="text/javascript" charset="utf-8"></script>#}
+    <script type="text/javascript" src="/static/js/artDialog.js"></script>
+    <script type="text/javascript" src="/static/js/login.js"></script>
+    <script src="/static/js/language1.js"></script>
+
+    <title>温言</title>
+    <meta name="keywords" content="温言">
+
+{#    <meta property="qc:admins" content="2171777056651630121166375">#}
+{#    <script charset="UTF-8" src="/static/js/bundle.js"></script>#}
+{#    <script charset="UTF-8" src="/static/js/iframeWidget.js"></script>#}
+     <style>
+         .menu_bg .menu ul li {
+             padding: 0 10px; }
+     </style>
+</head>
+
+<body>
+    <div class="" style="display: none; position: absolute;">
+        <div class="aui_outer">
+            <table class="aui_border">
+                <tbody>
+                    <tr>
+                        <td class="aui_nw"></td>
+                        <td class="aui_n"></td>
+                        <td class="aui_ne"></td>
+                    </tr>
+                    <tr>
+                        <td class="aui_w"></td>
+                        <td class="aui_c">
+                            <div class="aui_inner">
+                                <table class="aui_dialog">
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2" class="aui_header">
+                                                <div class="aui_titleBar">
+                                                    <div class="aui_title" style="cursor: move; display: block;"></div>
+                                                    <a class="aui_close" href="javascript:/*artDialog*/;" style="display: block;">×</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="aui_icon" style="display: none;">
+                                                <div class="aui_iconBg" style="background: none;"></div>
+                                            </td>
+                                            <td class="aui_main" style="width: auto; height: auto;">
+                                                <div class="aui_content" style="padding: 20px 25px;"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="aui_footer">
+                                                <div class="aui_buttons" style="display: none;"></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="aui_e"></td>
+                    </tr>
+                    <tr>
+                        <td class="aui_sw"></td>
+                        <td class="aui_s"></td>
+                        <td class="aui_se" style="cursor: se-resize;"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+{#    <iframe id="sina_anywhere_iframe" style="display: none;" src="/static/img/saved_resource.html"></iframe>#}
+<a name="gotop"></a>
+<div class="menu_bg1" id="ajax_menu">
+    <div id="menu" style="position:relative; z-index:99999;">
+        <div class="login">
+            <ul>
+                <ul>
+                    <li class="login_id" style="display: none">0</li>
+                    <li class="mysharli2" >
+                        <a href="/register">注册</a>
+                    </li>
+                    <li class="other">
+                        <a href="/login" class="hide" id="hide_login">登录</a>
+                    </li>
+                    <li class="other1">
+                        <a href=""  title="" rel="sidebar" class="favorit">加入收藏</a>
+                    </li>
+                    <li class="mysharli">
+                        <a href="" id="change">简繁体切换</a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+</div>
+    <script>
+function login(uid){
+    art.dialog({
+        title: '基本信息',
+        fixed: true,
+        background: '#333333',
+        opacity: 0.5,
+        content: '<div class="register_pop">' +
+            '<div class="form">' +
+            '<form action="/information/" method="post" enctype="multipart/form-data">' +
+            '<ul>' +
+            '<li>' +
+            '<input type="hidden" name="userid" value="'+ uid +'">'+
+            '</li>'+
+            '<li>' +
+            '<label>姓名</label>' +
+            '<span><input name="uname" id="login_email" type="text" class="input_text"/></span></li>' +
+            '<li><label>年龄</label><span><input name="uage" id="age" type="text" class="input_text"/></span><em class="login_password_errorInfo" id="login_errorInfo"></em></li>' +
+            '<li><label>性别</label><span><input type="radio" name="gender" value="male" checked="checked">男' +
+            '&nbsp;&nbsp;<input type="radio" name="gender" value="female">女</span><em class="login_password_errorInfo" id="login_errorInfo"></em></li>' +
+            '<li><label>城市</label><span><input name="city" id="city" type="text" class="input_text"/></span><em class="login_password_errorInfo" id="login_errorInfo"></em></li>' +
+            '<li><label>上传头像</label><span><input name="uimg" id="picture" type="file" ></span><em class="login_password_errorInfo" id="login_errorInfo"></em></li>' +
+            '<li>' +
+            '<input id="ajaxlogin" name="ajaxlogin" type="submit" value="保存" class="btn-reg">' +
+            '</li>' +
+            '</ul>' +
+            '</form><div class="other-list"></div>' +
+            '</div>' +
+            '</div>'
+    });
+}
+function login1(){
+    art.dialog({
+        title: '用户登录',
+        fixed: true,
+        background: '#333333',
+        opacity: 0.5,
+        content: '<div class="register_pop">' +
+            '<h1>欢迎登录<span class="green_title">温言</span></h1>' +
+            '<div class="form">' +
+            '<form action="/login/" method="post">' +
+            '<ul>' +
+            '<li>' +
+            '<label>用户名</label>' +
+            '<span><input name="uname" id="login_name" type="text" class="input_text"/></span>' +
+            '<em class="login_email_name"></em>' +
+            '</li>' +
+            '<li>' +
+            '<label>密码</label>' +
+            '<span><input name="password" id="password" type="password" class="input_text"/></span><em class="login_password_upwd" id="login_errorInfo"></em>' +
+            '</li>' +
+            '<li><span style="padding-left:110px;"><a href="/forget">忘记密码？</a></span></li>' +
+            '<li><input id="ajaxlogin" name="ajaxlogin" type="submit"  value="登录" class="btn-reg" /></li></ul></form><div class="other-list"></div></div></div>'
+    })
+}
+</script>
+
+
+<div class="search">
+    <div class="logo">
+        <a href="#">温言</a>
+    </div>
+    <form action="#" method="post" accept-charset="utf-8" id="article_search" class="sns-form" enctype="multipart/form-data">
+        <div class="searcher">
+            <ul>
+                <li>
+                    <div class="text">
+                        <input name="articles_keyword" type="text" maxlength="30" style="width:220px; height:30px; line-height:30px; float:left; background:none; border:none; color:#666;">
+                    </div>
+                </li>
+                <li><input name="articles_search_button" type="submit" class="botton" value=""></li>
+            </ul>
+        </div>
+    </form></div>
+<div class="menu_bg">
+    <div id="menu">
+        <div class="menu">
+            <ul>
+                <li class="find">
+                    <a href="/">首页</a>
+                </li>
+                <li>
+                    <a rel="nofollow" class="hide" href="/showclass">失恋33天</a>
+                </li>
+                <li>
+                <a class="hide" href="#">一别两宽</a>
+                </li>
+                <li>
+                    <a class="hide" href="#">各生欢喜</a>
+                </li>
+                <li>
+                    <a class="hide" href="3">再逢亦友</a>
+                </li>
+                <li>
+                    <a class="hide" href="#">交谈甚欢</a>
+                </li>
+                <li>
+                    <a href="#" style="width:95px;">发现美好</a>
+                </li>
+                <li>
+                    <a class="hide" href="#">心里咨询</a>
+                    <ul>
+                        <li><a href="">治愈音乐</a></li>
+                        <li><a href="">治愈书籍</a></li>
+                        <li><a href="">治愈电影</a></li>
+                        <li><a href="">线上咨询</a></li>
+                        <li><a href="">到店咨询</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div><div class="index_body">
+    <!--<script type="text/javascript" src="http://www.manshijian.com/scripts/frontpage/lrtk.js"></script>-->
+<script>
+$(function() {
+	$('#ppselected a').click(function() {
+		var t = $(this).attr('t');
+		$('#ppselected a').each(function(){
+			var tt = $(this).attr('t');
+			$("#"+tt).hide();
+		});
+	   $("#"+t).show();
+	   $("#"+t+" input:radio:first").attr("checked","checked");
+	   $("#ppselected>a").attr("class","xz2");
+	   $(this).removeAttr("class");
+	});
+});
+</script>
+<style type="text/css">
+#banner {position:relative; width:740px; height:280px; border:1px solid #dcdcdc; overflow:hidden; font-size:16px} 
+#banner_list img {border:0px;} 
+#banner_bg {position:absolute; bottom:0;background-color:#000;height:30px;filter: Alpha(Opacity=30);opacity:0.3;z-index:1000;cursor:pointer; width:740px; } 
+#banner_info{position:absolute; bottom:4px; left:5px;height:22px;color:#fff;z-index:1001;cursor:pointer} 
+#banner_text {position:absolute;width:120px;z-index:1002; right:3px; bottom:3px;} 
+#banner ul {position:absolute;list-style-type:none;filter: Alpha(Opacity=80);opacity:0.8; z-index:1002; margin:0; padding:0; bottom:3px; right:5px; height:20px; margin-right:60px;} 
+#banner ul li { padding:0 8px; line-height:18px;float:left;display:block;color:#FFF; border:#e5eaff 1px solid;cursor:pointer; margin:0; font-size:16px;} 
+#banner_list a{position:absolute;} </style> 
+<div id="zSlider">
+    <div id="banner"> 
+        <div id="banner_bg">
+        	<div style="border:#e5eaff 1px solid; margin-top:7px; float:right; height:18px; width:50px;  text-align:center; display:block;">
+                <a href="#" style="color:#fff; text-decoration:none;  line-height:18px; font-size:13px;">更多</a>
+            </div>
+        </div> 
+        <!--标题背景--> 
+        <div id="banner_info">最美的文字</div> 
+        <!--标题--> 
+        <ul> 
+            <li style="background: none; color: rgb(255, 255, 255);">1</li>
+            <li style="background: none; color: rgb(255, 255, 255);">2</li>
+            <li style="background: none; color: rgb(255, 255, 255);">3</li>
+            <li style="background: rgb(255, 255, 255); color: rgb(0, 0, 0);">4</li>
+            <li style="background: none; color: rgb(255, 255, 255);">5</li>
+            <li style="background: none; color: rgb(255, 255, 255);">6</li>
+            <li style="background: none; color: rgb(255, 255, 255);">7</li>
+        </ul>
+        <div id="banner_list">           
+             <a href="/static/img/banner1.jpg" target="_blank" style="display: block;"><img src="/static/img/upimg/1.jpg" title="从前车马很浪漫，一生只够爱一人" alt="从前车马很浪漫，一生只够爱一人"></a>
+             <a href="#" target="_blank" style="display: none;"><img src="/static/img/upimg/2.jpg" title="往后余生，活得像狗，孤独也自由" alt="往后余生，活得像狗，孤独也自由"></a>
+             <a href="#" target="_blank" style="display: none;"><img src="/static/img/upimg/3.jpg" title="幸好遇见你还年少，时光挥霍并未蹉跎" alt="幸好遇见你还年少，时光挥霍并未蹉跎"></a>
+             <a href="#" target="_blank" style="display: none;"><img src="/static/img/upimg/4.jpg" title="做个平淡步平庸的人，不乱于心，不困于情" alt="做个平淡步平庸的人，不乱于心，不困于情"></a>
+             <a href="#" target="_blank" style="display: none;"><img src="/static/img/upimg/5.jpg" title="我等的船还不来，我等的人还不明白" alt="我等的船还不来，我等的人还不明白"></a>
+             <a href="#" target="_blank" style="display: none;"><img src="/static/img/upimg/6.jpg" title="祝你岁月无波澜，敬我余生不悲欢" alt="祝你岁月无波澜，敬我余生不悲欢"></a>
+             <a href="#" target="_blank" style="display: none;"><img src="/static/img/upimg/7.jpg" title="我喜欢你，从一而终，认真且怂" alt="我喜欢你，从一而终，认真且怂"></a>
+        </div>
+    </div>
+</div>
+<div class="right_botton">
+        <div style="font-size:14px; text-align:center; color:#666666; font-weight:normal;padding-bottom:5px; width:250px; float:left;">有奖征集<h1>慢生活</h1>资讯</div>
+        <ul>
+            <li class="add_article">
+                <a href="release" title="文章发布">文章发布</a>
+            </li>
+            <li class="add_party"><a href="#" title="活动发布">活动发布</a></li>
+        </ul>
+    </div>
+<div class="index_news">
+    <div id="ppselected" class="index_news2">
+        <a href="javascript:void(0);" id="online_more" t="pptype_1" style="cursor: pointer;">话题慢聊</a>
+        <a href="javascript:void(0);" id="article_more" t="pptype_2" class="xz2" style="cursor: pointer;">最新文章</a>
+        <span class="more"><a id="more_link" href="#" class="more">更多...</a></span>
+    </div>
+   <div id="pptype_1"> 
+        <ul>
+                        <li>
+                <a href="#" title="2017年发生了很多事情，哪件事情让你最" target="_blank">
+                    2017年发生了很多事情...                </a>
+                <span>[12-25]</span>
+            </li>
+                        <li>
+                <a href="#" title="留下你暗恋的人名字缩写，并对Ta说句话" target="_blank">
+                    留下你暗恋的人名字缩写，...                </a>
+                <span>[12-25]</span>
+            </li>
+                        <li>
+                <a href="#" title=" 说说你难忘的梦" target="_blank">
+                    说说你难忘的梦                </a>
+                <span>[12-25]</span>
+            </li>
+                        <li>
+                <a href="#" title="你有过哪些离奇的经历" target="_blank">
+                    你有过哪些离奇的经历                </a>
+                <span>[10-24]</span>
+            </li>
+                        <li>
+                <a href="#" title="印象最深的童年回忆" target="_blank">
+                    印象最深的童年回忆                </a>
+                <span>[10-10]</span>
+            </li>
+                    </ul>
+   </div>
+    <div id="pptype_2" style="display:none;"> 
+        <ul>
+                        <li>
+                <a href="#" title="此新型盆栽植物，比绿萝还好养，花色小清新，四季开花，值得入手" target="_blank">
+                    此新型盆栽植物，比绿萝还...                </a>
+                <span>[10-23]</span>
+            </li>
+                        <li>
+                <a href="#" title="一些好读的人类学作品，欢迎评论补充。 ​​​​" target="_blank">
+                    一些好读的人类学作品，欢...                </a>
+                <span>[10-23]</span>
+            </li>
+                        <li>
+                <a href="#" title="Maria Svarbova泳池系列摄影作品" target="_blank">
+                    Maria Svarbo...                </a>
+                <span>[10-23]</span>
+            </li>
+                        <li>
+                <a href="#" title="酸奶松饼" target="_blank">
+                    酸奶松饼                </a>
+                <span>[10-23]</span>
+            </li>
+                        <li>
+                <a href="#" title="学会这些，再也不用担心花不开草不绿了，好神奇！" target="_blank">
+                    学会这些，再也不用担心花...                </a>
+                <span>[10-22]</span>
+            </li>
+                    </ul>
+    </div>
+</div>
+<div class="clear"></div>
+<script type="text/javascript">
+    var t = n = 0, count; 
+    $(document).ready(function(){ 
+        count=$("#banner_list a").length; 
+        $("#banner_list a:not(:first-child)").hide(); 
+        $("#banner_info").html($("#banner_list a:first-child").find("img").attr('alt')); 
+        $("#banner_info").click(function(){
+            window.open($("#banner_list a:first-child").attr('href'), "_blank")
+        }); 
+        $("#banner li").click(function() { 
+            var i = $(this).text() - 1;//获取Li元素内的值，即1，2，3，4 
+            n = i; 
+            if (i >= count) return; 
+            $("#banner_info").html($("#banner_list a").eq(i).find("img").attr('alt')); 
+            $("#banner_info").unbind().click(function(){window.open($("#banner_list a").eq(i).attr('href'), "_blank")}) 
+            $("#banner_list a").filter(":visible").fadeOut(500).parent().children().eq(i).fadeIn(1000); 
+            $(this).css({"background":"#fff",'color':'#000'}).siblings().css({"background":"none",'color':'#fff'}); 
+        }); 
+        t = setInterval("showAuto()", 4000); 
+        $("#banner").hover(function(){
+            clearInterval(t)}, function(){t = setInterval("showAuto()", 4000);
+        }); 
+    }) 
+    function showAuto() 
+    { 
+        n = n >=(count - 1) ? 0 : ++n; 
+        $("#banner li").eq(n).trigger('click'); 
+    }
+    
+    $("#online_more").live('click',function(){
+        $('#more_link').attr("href","#");
+    })
+    
+    $("#article_more").live('click',function(){
+        $('#more_link').attr("href","#");
+    })
+</script>
+        <!--失恋33天-->
+<div class="index_box_s">
+    <div class="index_box">
+        <div class="titles">
+            <h1><a href="/showclass">失恋33天</a></h1>
+            <div class="menus_two">
+                 <span>│</span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-left">
+                                <div class="x-imgs1"><a href="/showclass" target="_blank"><img src="/static/img/7540e6bbf5dfb214426f7b2ad42c85a7.jpg" width="205" height="256"></a></div>
+                <div class="x-text1"><a href="/showclass" target="_blank">10个有趣、实用的养花创意，盆栽花就该这么养！</a></div>
+                            </div>
+            <div class="content-right">
+                <ul>
+                                        <div class="home-share-user_2">
+                        <dl class="share-avatar cls">
+                            <dt><a href="/info" class="common-card" target="_blank"><img width="53" height="40" src="/static/img/4ad079600374725697a8a1354978ed3e.jpg"></a></dt>
+                            <dd><a href="#" class="title" title="此新型盆栽植物，比绿萝还好养，花色小清新，四季开花，值得入手" target="_blank">此新型盆栽植物，比绿萝还好养，花色小清新，四季开花，值得入手...</a></dd>
+                            <dd>
+                            <p class="desc">给大家介绍一种新型盆栽观赏花卉，它有着多肉植物般的肥嫩叶子，...</p>
+                            </dd>
+                        </dl>
+                    </div>
+                                        <div class="home-share-user_2">
+                        <dl class="share-avatar cls">
+                            <dt><a href="#" class="common-card" target="_blank"><img width="53" height="40" src="/static/img/235eab3d3a65c481b5929418876aa4aa.jpg"></a></dt>
+                            <dd><a href="#" class="title" title="酸奶松饼" target="_blank">酸奶松饼</a></dd>
+                            <dd>
+                            <p class="desc">酸奶松饼只要一个不粘锅，不需要一滴油！手残党也能成功，懒人...</p>
+                            </dd>
+                        </dl>
+                    </div>
+                                        <div class="home-share-user_2">
+                        <dl class="share-avatar cls">
+                            <dt><a href="#" class="common-card" target="_blank"><img width="53" height="40" src="/static/img/56506c92e760e8dc8bdf946aa2801599.jpg"></a></dt>
+                            <dd><a href="#" class="title" title="学会这些，再也不用担心花不开草不绿了，好神奇！" target="_blank">学会这些，再也不用担心花不开草不绿了，好神奇！...</a></dd>
+                            <dd>
+                            <p class="desc">家庭养花不仅可以装点居室，欣赏鲜花的艳丽，还能够净化室内空气...</p>
+                            </dd>
+                        </dl>
+                    </div>
+                                        <div class="home-share-user_2">
+                        <dl class="share-avatar cls">
+                            <dt><a href="#" class="common-card" target="_blank"><img width="53" height="40" src="/static/img/939a21401dd602a0204d086a12f2f777.jpg"></a></dt>
+                            <dd><a href="#" class="title" title="插画与画纸的创意互动 ，来自丹麦艺术家 Husk MitNavn ​​​​" target="_blank">插画与画纸的创意互动 ，来自丹麦艺术家 Husk MitNa...</a></dd>
+                            <dd>
+                            <p class="desc">插画与画纸的创意互动 ，来自丹麦艺术家 Husk MitNa...</p>
+                            </dd>
+                        </dl>
+                    </div>
+                                        <div class="home-share-user_2">
+                        <dl class="share-avatar cls">
+                            <dt><a href="#" class="common-card" target="_blank"><img width="53" height="40" src="/static/img/f4347ce454fea09756795c652a17f20b.jpeg"></a></dt>
+                            <dd><a href="#" class="title" title="杭椒牛柳" target="_blank">杭椒牛柳</a></dd>
+                            <dd>
+                            <p class="desc">一道简单又好吃到尖叫的荤菜...</p>
+                            </dd>
+                        </dl>
+                    </div>
+                                    </ul>
+                 <div class="clear"></div>
+               	 <div class="home_find_mroe1"><a href="#" title="加盟时间慢递，实现梦想">加盟时间慢递，实现梦想</a></div>
+            </div>
+            <div class="clear"></div>
+            <div class="x-tabs">
+                <span>TAG</span>
+                    <a rel="nofollow" href="#" title="失恋33天" target="_blank">失恋33天</a>
+            </div>
+        </div>
+    </div>
+    <div class="add_banner"><a href="#"><img src="/static/img/banner_ad_02.jpg" border="0"></a></div>
+</div>
+
+<!--一别两宽-->
+<div class="index_box_s" style="margin-left:10px; float:left;">
+    <div class="index_box">
+        <div class="titles">
+            <h1><a href="#">一别两宽</a></h1>
+            <div class="menus_two">
+                <span>│</span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-left">
+                                <div class="x-imgs1"><a href="#" target="_blank"><img src="/static/img/b807dc6e2bc566455fe001efa55e3def.jpg" width="205" height="256"></a></div>
+                <div class="x-text1"><a href="#" target="_blank">我生命中最特殊的女朋友 </a></div>
+                            </div>
+            <div class="content-right">
+                                <div class="home-share-user_2">
+                    <dl class="share-avatar cls">
+                        <dt><a href="#" class="common-card" target="_blank"><img width="53" height="40" src="/static/img/a905206c4fce297365f6b158eea5fc0a.jpg"></a></dt>
+                        <dd><a href="#" class="title" title="成都教授住10亩院子，养200种动物，还有草泥马 " target="_blank">成都教授住10亩院子，养200种动物，还有草泥马...</a></dd>
+                        <dd>
+                        <p class="desc">重庆人李里，是一位国学教授，2013年时，他把家搬到成都郊区...</p>
+                        </dd>
+                    </dl>
+                </div>
+                                <div class="home-share-user_2">
+                    <dl class="share-avatar cls">
+                        <dt><a href="#" class="common-card" target="_blank"><img width="53" height="40" src="/static/img/e9ddeca229c3385194a977330d94926d.jpg"></a></dt>
+                        <dd><a href="#" class="title" title="北京大叔拍下80年代珍贵旧照，那时候的少男少女们，干干净净" target="_blank">北京大叔拍下80年代珍贵旧照，那时候的少男少女们，干干净净...</a></dd>
+                        <dd>
+                        <p class="desc">80年代，男女同学们自己带抹布一起大扫除风靡80年代的梅花运...</p>
+                        </dd>
+                    </dl>
+                </div>
+                                <div class="home-share-user_2">
+                    <dl class="share-avatar cls">
+                        <dt><a href="#" class="common-card" target="_blank"><img width="53" height="40" src="/static/img/9cb118982bcf8d24fdb5b6035d579dfd.jpg"></a></dt>
+                        <dd><a href="#" class="title" title="他在顶级酒店开了家餐厅，选厨师要看身材！ " target="_blank">他在顶级酒店开了家餐厅，选厨师要看身材！...</a></dd>
+                        <dd>
+                        <p class="desc">在广州，直接用厨师名字来命名的餐厅屈指可数，而通常敢用自己的...</p>
+                        </dd>
+                    </dl>
+                </div>
+                                <div class="home-share-user_2">
+                    <dl class="share-avatar cls">
+                        <dt><a href="#" class="common-card" target="_blank"><img width="53" height="40" src="/static/img/812aa3d2bd4f13d779fa5696aa63ff29.jpg"></a></dt>
+                        <dd><a href="#" class="title" title="简直“变态”！90后纽约女孩践行零垃圾生活，四年产生的垃圾一个玻璃瓶就能装下... " target="_blank">简直“变态”！90后纽约女孩践行零垃圾生活，四年产生的垃圾一...</a></dd>
+                        <dd>
+                        <p class="desc">前段时间，一则“北极圈罕见32℃高温”的消息刷爆了朋友圈，仅...</p>
+                        </dd>
+                    </dl>
+                </div>
+                                <div class="home-share-user_2">
+                    <dl class="share-avatar cls">
+                        <dt><a href="#" class="common-card" target="_blank"><img width="53" height="40" src="/static/img/7e0948725517c4c9b71690d3668ce529.jpg"></a></dt>
+                        <dd><a href="#" class="title" title="男摄影师好色起来，简直让人脸红心跳…… " target="_blank">男摄影师好色起来，简直让人脸红心跳……...</a></dd>
+                        <dd>
+                        <p class="desc">大家好，我是象君你见过带着甜味的建筑嘛每一幢楼宇都被包裹着明...</p>
+                        </dd>
+                    </dl>
+                </div>
+                                  <div class="clear"></div>
+                  <div class="home_find_mroe1"><a href="#" title="我是慢一族，我想出现在这里">我是慢一族，我想出现在这里</a></div>
+            </div>
+            <div class="clear"></div>
+            <div class="x-tabs">
+                <span>TAG</span>
+                    <a rel="nofollow" href="#" title="一别两宽" target="_blank">一别两宽</a>
+            </div>
+        </div>
+    </div>
+    <div class="add_banner"><a href="#"><img src="/static/img/banner_ad_04.jpg"></a></div>
+</div>
+<div class="clear"></div>
+
+<!--慢风景-->
+<div class="index_box_s box_right">
+    <div class="index_box">
+        <div class="titles">
+            <h1><a href="#">各生欢喜</a></h1>
+            <div class="menus_two">
+                <span>│</span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-left">
+                                <div class="x-imgs"><a href="#" target="_blank"><img src="/static/img/b526aedf0f9a0725cea2ea925203305d.jpg" width="205" height="256"></a></div>
+                <div class="x-text"><a href="#" target="_blank"> 孤独画像 ｜David Uzochukwu</a></div>
+                            </div>
+            <div class="content-right">
+                <ul>
+                                        <li><a href="#" title="Maria Svarbova泳池系列摄影作品" target="_blank">Maria Svarbova泳池系列摄影作品</a></li>
+                                        <li><a href="#" title="最适合一个人漫游的9个旅行地，累了就去走一走。 ​​​​" target="_blank">最适合一个人漫游的9个旅行地，累了就去走一走。 ​​​​...</a></li>
+                                        <li><a href="#" title="Niaz Uddin漂亮的鸟瞰航拍摄影作品" target="_blank">Niaz Uddin漂亮的鸟瞰航拍摄影作品</a></li>
+                                        <li><a href="#" title="弄堂里的古怪小店，一台旧电视就能让80后的你泪流满面" target="_blank">弄堂里的古怪小店，一台旧电视就能让80后的你泪流满面...</a></li>
+                                        <li><a href="#" title="Zack Seckler：南非航拍摄影作品" target="_blank">Zack Seckler：南非航拍摄影作品</a></li>
+                                        <li><a href="#" title="重庆必打卡景点TOP9，get！！！ ​​​​" target="_blank">重庆必打卡景点TOP9，get！！！ ​​​​...</a></li>
+                                        <li><a href="#" title="Ben Thomas “糖果味”建筑摄影" target="_blank">Ben Thomas “糖果味”建筑摄影</a></li>
+                                    </ul>
+                 <div class="clear"></div>
+                <div class="home_find_mroe"><a href="#" title="邂逅慢专题">邂逅慢专题</a></div>
+            </div>
+            <div class="clear"></div>
+            <div class="x-tabs">
+                <span>TAG</span>
+                <a rel="nofollow" href="#" title="各生欢喜" target="_blank">各生欢喜</a>
+
+            </div>
+        </div>
+    </div>
+    <div class="add_banner"><a href="#"><img src="/static/img/banner_manhuamian.jpg" border="0"></a></div>
+</div>
+
+<!--慢文艺-->
+<div class="index_box_s">
+    <div class="index_box">
+        <div class="titles">
+            <h1><a href="#">再逢亦友</a></h1>
+            <div class="menus_two">
+                <span>│</span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-left">
+                                <div class="x-imgs"><a href="#" target="_blank"><img src="/static/img/9730ee21eb56ef959dbb626a5c2bac6f.jpg" width="205" height="256"></a></div>
+                <div class="x-text"><a href="#" target="_blank">美国影响最大的文学奖项之一——美国国家图书奖历年小说类获奖作品 ​​​​</a></div>
+                            </div>
+            <div class="content-right">
+                <ul>
+                                        <li><a href="#" title="一些好读的人类学作品，欢迎评论补充。 ​​​​" target="_blank">一些好读的人类学作品，欢迎评论补充。 ​​​​...</a></li>
+                                        <li><a href="#" title="更了解这颗蓝色星球，九本有关海洋的故事。 ​​​​" target="_blank">更了解这颗蓝色星球，九本有关海洋的故事。 ​​​​...</a></li>
+                                        <li><a href="#" title="一座博物馆就是一部庞大的历史书籍。  推荐几本与「博物馆」有关的作品，欢迎评论补充。 ​​​​" target="_blank">一座博物馆就是一部庞大的历史书籍。 推荐几本与「博物馆」有关的作品，欢迎评论补充。 ​​​​...</a></li>
+                                        <li><a href="#l" title="国外同志文学作品​​​​" target="_blank">国外同志文学作品​​​​</a></li>
+                                        <li><a href="#" title="8部让你笑到喷饭的经典喜剧电影，笑点低者慎入！" target="_blank">8部让你笑到喷饭的经典喜剧电影，笑点低者慎入！...</a></li>
+                                        <li><a href="#" title="除了加西亚·马尔克斯，还有这些西语文学作品也值得关注。" target="_blank">除了加西亚·马尔克斯，还有这些西语文学作品也值得关注。...</a></li>
+                                        <li><a href="#" title="夏日书单 | 假如存在一本和夏天气质相符的书，你想到的是哪一本？ ​​​ ​​​​" target="_blank">夏日书单 | 假如存在一本和夏天气质相符的书，你想到的是哪一本？ ​​​ ​​​​...</a></li>
+                                    </ul>
+                 <div class="clear"></div>
+                <div class="home_find_mroe"><a href="#" title="我有好的电影/ 书籍/音乐要推荐">我有好的电影/ 书籍/音乐要推荐</a></div>
+            </div>
+            <div class="clear"></div>
+            <div class="x-tabs">
+                <span>TAG</span>
+                <a rel="nofollow" href="#" title="再逢亦友" target="_blank">再逢亦友</a>
+            </div>
+        </div>
+    </div>
+    <div class="add_banner"><a href="" title="推荐电影/书籍/音乐"><img src="/static/img/banner_ad_03.jpg"></a></div>
+</div>
+{# #}
+<div class="index_box_s">
+    <div class="index_box">
+        <div class="titles">
+            <h1><a href="#">交谈甚欢</a></h1>
+            <div class="menus_two">
+                <span>│</span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-left">
+                                <div class="x-imgs"><a href="#" target="_blank"><img src="/static/img/9730ee21eb56ef959dbb626a5c2bac6f.jpg" width="205" height="256"></a></div>
+                <div class="x-text"><a href="#" target="_blank">美国影响最大的文学奖项之一——美国国家图书奖历年小说类获奖作品 ​​​​</a></div>
+                            </div>
+            <div class="content-right">
+                <ul>
+                                        <li><a href="#" title="一些好读的人类学作品，欢迎评论补充。 ​​​​" target="_blank">一些好读的人类学作品，欢迎评论补充。 ​​​​...</a></li>
+                                        <li><a href="#" title="更了解这颗蓝色星球，九本有关海洋的故事。 ​​​​" target="_blank">更了解这颗蓝色星球，九本有关海洋的故事。 ​​​​...</a></li>
+                                        <li><a href="#" title="一座博物馆就是一部庞大的历史书籍。  推荐几本与「博物馆」有关的作品，欢迎评论补充。 ​​​​" target="_blank">一座博物馆就是一部庞大的历史书籍。 推荐几本与「博物馆」有关的作品，欢迎评论补充。 ​​​​...</a></li>
+                                        <li><a href="#l" title="国外同志文学作品​​​​" target="_blank">国外同志文学作品​​​​</a></li>
+                                        <li><a href="#" title="8部让你笑到喷饭的经典喜剧电影，笑点低者慎入！" target="_blank">8部让你笑到喷饭的经典喜剧电影，笑点低者慎入！...</a></li>
+                                        <li><a href="#" title="除了加西亚·马尔克斯，还有这些西语文学作品也值得关注。" target="_blank">除了加西亚·马尔克斯，还有这些西语文学作品也值得关注。...</a></li>
+                                        <li><a href="#" title="夏日书单 | 假如存在一本和夏天气质相符的书，你想到的是哪一本？ ​​​ ​​​​" target="_blank">夏日书单 | 假如存在一本和夏天气质相符的书，你想到的是哪一本？ ​​​ ​​​​...</a></li>
+                                    </ul>
+                 <div class="clear"></div>
+                <div class="home_find_mroe"><a href="#" title="我有好的电影/ 书籍/音乐要推荐">我有好的电影/ 书籍/音乐要推荐</a></div>
+            </div>
+            <div class="clear"></div>
+            <div class="x-tabs">
+                <span>TAG</span>
+                <a rel="nofollow" href="#" title="交谈甚欢" target="_blank">交谈甚欢</a>
+            </div>
+        </div>
+    </div>
+    <div class="add_banner"><a href="" title="推荐电影/书籍/音乐"><img src="/static/img/banner_ad_03.jpg"></a></div>
+</div>
+{#美好生活#}
+ <div class="index_box_s">
+    <div class="index_box">
+        <div class="titles">
+            <h1><a href="#">美好生活</a></h1>
+            <div class="menus_two">
+                <span>│</span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-left">
+                                <div class="x-imgs"><a href="#" target="_blank"><img src="/static/img/9730ee21eb56ef959dbb626a5c2bac6f.jpg" width="205" height="256"></a></div>
+                <div class="x-text"><a href="#" target="_blank">美国影响最大的文学奖项之一——美国国家图书奖历年小说类获奖作品 ​​​​</a></div>
+                            </div>
+            <div class="content-right">
+                <ul>
+                                        <li><a href="#" title="一些好读的人类学作品，欢迎评论补充。 ​​​​" target="_blank">一些好读的人类学作品，欢迎评论补充。 ​​​​...</a></li>
+                                        <li><a href="#" title="更了解这颗蓝色星球，九本有关海洋的故事。 ​​​​" target="_blank">更了解这颗蓝色星球，九本有关海洋的故事。 ​​​​...</a></li>
+                                        <li><a href="#" title="一座博物馆就是一部庞大的历史书籍。  推荐几本与「博物馆」有关的作品，欢迎评论补充。 ​​​​" target="_blank">一座博物馆就是一部庞大的历史书籍。 推荐几本与「博物馆」有关的作品，欢迎评论补充。 ​​​​...</a></li>
+                                        <li><a href="#l" title="国外同志文学作品​​​​" target="_blank">国外同志文学作品​​​​</a></li>
+                                        <li><a href="#" title="8部让你笑到喷饭的经典喜剧电影，笑点低者慎入！" target="_blank">8部让你笑到喷饭的经典喜剧电影，笑点低者慎入！...</a></li>
+                                        <li><a href="#" title="除了加西亚·马尔克斯，还有这些西语文学作品也值得关注。" target="_blank">除了加西亚·马尔克斯，还有这些西语文学作品也值得关注。...</a></li>
+                                        <li><a href="#" title="夏日书单 | 假如存在一本和夏天气质相符的书，你想到的是哪一本？ ​​​ ​​​​" target="_blank">夏日书单 | 假如存在一本和夏天气质相符的书，你想到的是哪一本？ ​​​ ​​​​...</a></li>
+                                    </ul>
+                 <div class="clear"></div>
+                <div class="home_find_mroe"><a href="#" title="我有好的电影/ 书籍/音乐要推荐">我有好的电影/ 书籍/音乐要推荐</a></div>
+            </div>
+            <div class="clear"></div>
+            <div class="x-tabs">
+                <span>TAG</span>
+                <a rel="nofollow" href="#" title="美好生活" target="_blank">美好生活</a>
+            </div>
+        </div>
+    </div>
+    <div class="add_banner"><a href="" title="推荐电影/书籍/音乐"><img src="/static/img/banner_ad_03.jpg"></a></div>
+</div>
+{#<script type="text/javascript">#}
+{#    #}
+{#    $(document).ready(function(){#}
+{#        $.post('/home/get_discover',{},function(msg){#}
+{#            $("#discover").html(msg);#}
+{#        });#}
+{#    });#}
+{#</script>#}
+                                                             
+</div></div>
+<div class="footer">
+    <div class="foot">
+        <div class="understand">
+            <ul>
+                <li><b><a name="manshijian">了解慢时间</a></b></li>
+                <li><a href="http://www.manshijian.com/aboutus.html">关于我们</a></li> 
+                <li><a href="http://www.manshijian.com/agreement.html">使用协议</a></li>
+                <li><a href="http://www.manshijian.com/cooperation.html">商务合作</a></li>
+            </ul>
+        </div>
+    
+        <div class="user">
+            <ul>
+                <li><b>用户中心</b></li>
+                <li><a href="">意见反馈</a></li>
+                <li><a href="#">常见问题</a></li>
+                <li><a href="#">新手上路</a></li>
+            </ul>
+        </div>
+        <div class="weixin">
+            <ul>
+                <li><b>微信二维码</b></li>
+                <li><a href="http://www.manshijian.com/images/weixin.jpg" target="_blank"><img src="/static/img/weixin.png"></a></li>
+            </ul>
+        </div>
+        <div class="service">
+            <ul>
+                <li><b>关注我们</b></li>
+                <li><i></i><a target="_blank" href="#">新浪微博</a></li>
+                <li class="qq"><i></i><a target="_blank" href="#">腾讯微博</a></li>
+                <li class="douban"><i></i><a target="_blank" href="#">豆瓣小站</a></li>
+            </ul>
+        </div>
+        <div class="slowtime">
+        <h1>慢时间</h1>
+          <ul>
+            <li><a href="javascript:void(0);" title="慢生活" rel="nofollow" id="my_phone_footer">手机版</a></li>
+            <li><a href="javascript:void(0);" title="慢文艺" rel="nofollow" id="client_ios">iPhone客户端</a></li>
+            <li><a href="javascript:void(0);" title="慢风景" rel="nofollow" id="client_android">安卓客户端</a></li>
+          </ul>
+        </div>
+         
+                        <div class="menu" style="text-align: left;">
+            <span>友情链接:</span>
+                        <span><a href="#" target="_blank">慢生活</a></span>
+
+        </div>
+                <div class="bottom">Copyright © 2011-2018 慢时间 | <a href="#" target="_blank">慢生活</a>社区，小清新网站 </div>
+        <div class="go">
+    	<a title="返回顶部" class="top" href="#gotop"></a>
+    	<a title="如果您有意见，请反馈给我们！" class="feedback" href="#"></a>
+    	<a title="返回底部" class="bottom" href="#gobottom"></a>
+    </div>
+        <a name="gobottom">&nbsp;</a>
+</div>
+<div id="hm_t_7997" class="hm-t-container">
+<div class="hm-t-main" style="width:322px;height:322px;display:none">
+<img src="/static/img/bigweixin.jpg" width="320" height="320" alt="官方微信" title="官方微信">
+</div>
+<div class="hm-t-side-arrow" style="display: none;"></div>
+</div>
+<script type="text/javascript">
+        $("#change").click(function(){
+            translate();
+        })
+</script>
+
+</div>
+<script src="/static/js/index.js"></script>
+</body>
+
+</html>
